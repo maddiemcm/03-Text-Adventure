@@ -1,5 +1,3 @@
-#wassup hoes
-
 import sys, logging, json
 
 #check to make sure we are running the right version of Python
@@ -10,18 +8,36 @@ assert sys.version_info >= version, "This script requires at least Python {0}.{1
 logging.basicConfig(format='[%(filename)s:%(lineno)d] %(message)s', level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-def render(): 
-    ''' Display the current location '''
+
+
+
+# Game loop functions
+def render(game,current): 
+    ''' Display the current room, moves, and points '''
+    r = game['rooms']
+    c = r[current]
+
+    print('\n\nYou are in the {name}'.format(name=c['name']))
+    print(c['desc'])
+        # the render is figuring out where the person is by going from the rooms within the game (r = game ['rooms']), to current location to name and then itll say the description. Current is a variable but name and room are strings. 
     return True
 
+def checkInput():
+    '''Asks the user for input and normalizes the inputted value.'''
+
+    response = input('\nWhat would you like to do? ').strip().upper()
+    return response
+    
 def update():
     '''Update our location, if possible, etc. '''
-    return True
+    #verbs are north, south, east, west
+    #targets are the location you are targetting 
+    #exits represent transition between rooms based on verbs/input
+    for e in game['rooms'][current]['exits']:
+        if e['verb'] == response:
+            current = e['target']        
+    return current
 
-def check_input():
-    '''Check Player input'''
-    response = input('What would you like to do? ')
-    return response
 
 def main():
     game = {}
@@ -30,15 +46,15 @@ def main():
     # Your game goes here!
 
     current = 'WHOUS'
-# WHOUS is the location in the game where we start
+            # WHOUS is the location in the game where we start
     quit = False
     while not quit:
         #render
-        render()
+        render(game,current)
         #check player input
-        check_input()
+        selection = checkInput()
         #update
-        update()
+        current = update(selection, game, current)
         
     return True
 
