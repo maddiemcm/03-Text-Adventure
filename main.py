@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 
 # Game loop functions
-def render(game,current): 
+def render(game, current): 
     ''' Display the current room, moves, and points '''
     r = game['rooms']
     c = r[current]
@@ -27,8 +27,8 @@ def checkInput():
 
     response = input('\nWhat would you like to do? ').strip().upper()
     return response
-    
-def update():
+
+def update(response, game, current):
     '''Update our location, if possible, etc. '''
     #verbs are north, south, east, west
     #targets are the location you are targetting 
@@ -50,11 +50,11 @@ def main():
     quit = False
     while not quit:
         #render
-        render(game,current)
+        render(game, current)
         #check player input
-        selection = checkInput()
+        response = checkInput()
         #update
-        current = update(selection, game, current)
+        current = update(response, game, current)
         
     return True
 
