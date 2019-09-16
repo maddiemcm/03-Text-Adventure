@@ -134,9 +134,9 @@
       }
     ],
     "rooms": {
-      "WHOUS": {
-        "name": "West of House",
-        "desc": "This is an open field west of a white house, with a boarded front door.",
+      "WCASTLE": {
+        "name": "West of Castle",
+        "desc": "This is an open field west of a stone castle, with a lifted drawbridge.",
         "exits": [
           {
             "verb": "NORTH",
@@ -158,6 +158,9 @@
             "target": "NoExit",
             "condition": ""
           }
+          {
+            "verb": ""
+          }
         ],
         "inventory": []
       },
@@ -167,8 +170,13 @@
         "exits": [
           {
             "verb": "WEST",
-            "target": "WHOUS",
-            "condition": ""
+            "target": "WHOUS_SWORD",
+            "condition": "sword"
+          },
+          {
+            "verb": "WEST",
+            "target": "WHOUS_GUN",
+            "condition": "gun"
           },
           {
             "verb": "EAST",

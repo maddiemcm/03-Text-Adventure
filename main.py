@@ -28,14 +28,15 @@ def checkInput():
     response = input('\nWhat would you like to do? ').strip().upper()
     return response
 
-def update(response, game, current):
+def update(response, game, current, weapon):
     '''Update our location, if possible, etc. '''
     #verbs are north, south, east, west
     #targets are the location you are targetting 
     #exits represent transition between rooms based on verbs/input
     for e in game['rooms'][current]['exits']:
-        if e['verb'] == response:
-            current = e['target']        
+        if e['condition'] == '' or e['condition'] == weapon:
+            if e['verb'] == response:
+                current = e['target']        
     return current
 
 
@@ -45,16 +46,17 @@ def main():
         game = json.load(json_file)
     # Your game goes here!
 
-    current = 'WHOUS'
+    current = 'WCASTLE'
             # WHOUS is the location in the game where we start
     quit = False
+    weapon = "sword"
     while not quit:
         #render
         render(game, current)
         #check player input
         response = checkInput()
         #update
-        current = update(response, game, current)
+        current = update(response, game, current, weapon)
         
     return True
 
