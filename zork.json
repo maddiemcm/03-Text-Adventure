@@ -239,7 +239,7 @@
             "verb": "WEST",
             "target": "NoExit",
             "condition": ""
-          },
+          }
         ],
         "inventory": []
       },
@@ -261,7 +261,7 @@
             "verb": "SOUTH",
             "target": "FORE2",
             "condition": ""
-          },
+          }
         ],
         "inventory": []
       },
@@ -288,12 +288,12 @@
             "verb": "EAST",
             "target": "WCASTLE",
             "condition": ""
-          }
+          },
           {
             "verb": "UP",
             "target": "NoExit",
             "condition": ""
-          },
+          }
         ],
         "inventory": []
       },
@@ -325,11 +325,11 @@
             "verb": "WEST",
             "target": "FORE1",
             "condition": ""
-          }
+          },
           {
             "verb": "INVESTIGATE",
             "target": "Object",
-            "condition": "",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -362,11 +362,11 @@
             "verb": "WEST",
             "target": "NoExit",
             "condition": ""
-          }
+          },
           {
             "verb": "WEST",
             "target": "CROSSRIVER",
-            "condition": "sword",
+            "condition": "sword"
           }
         ],
         "inventory": []
@@ -480,7 +480,7 @@
             "verb": "WEST",
             "target": "NoExit",
             "condition": ""
-          },
+          }
         ],
         "inventory": []
       },
@@ -507,7 +507,7 @@
             "verb": "SW",
             "target": "COTTAGE",
             "condition": ""
-          },
+          }
         ],
         "inventory": []
       },
