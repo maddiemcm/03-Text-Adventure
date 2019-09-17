@@ -136,7 +136,7 @@
     "rooms": {
       "WCASTLE": {
         "name": "West of Abandoned Castle",
-        "desc": "This is an open field west of a tall stone castle. There is no door on this side of the castle, but there is a lovely watch tower that is too tall to scale without a rope.",
+        "desc": "This is an open field west of a tall stone castle. There is no door on this side of the castle, but there is something sparkling in the grass nearby.",
         "exits": [
           {
             "verb": "NORTH",
@@ -158,6 +158,7 @@
             "target": "NoExit",
             "condition": ""
           }
+
         ],
         "inventory": []
       },
@@ -261,8 +262,9 @@
             "target": "FORE2",
             "condition": ""
           },
-        ]
-      }
+        ],
+        "inventory": []
+      },
       "FORE1": {
         "name": "Forest to the West of the Castle",
         "desc": "This is a forest, with somewhat tall trees surrounding you. Light peaks through the canopy, and there are footpaths leading to the north, west, and south. The sounds of a stream seem to be coming from further west.",
@@ -297,7 +299,7 @@
       },
       "FORE2": {
         "name": "Forest to the South of the Castle",
-        "desc": "This is a dimly lit forest, with large leafy trees surrounding you.  To the\r\nwest, there appears to be a footpath and sunlight.",
+        "desc": "This is a dimly lit forest, with large leafy trees surrounding you.  To the\r\nwest, there appears to be a footpath and sunlight. You notice something glinting in the light.",
         "exits": [
           {
             "verb": "UP",
@@ -323,6 +325,48 @@
             "verb": "WEST",
             "target": "FORE1",
             "condition": ""
+          }
+          {
+            "verb": "INVESTIGATE",
+            "target": "Object",
+            "condition": "",
+          }
+        ],
+        "inventory": []
+      },
+      "RIVER": {
+        "name": "River and riverbank ",
+        "desc": "This is a wide but calm river. You might be able to cross it, but the bushes on the other side are too thick. You would need a sword to cut through them. To the north of the river you see a footpath. To your south, there's a steep wall of a mountain. You can't go this way.",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "ELF",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "FORE1",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NoExit",
+            "condition": ""
+          }
+          {
+            "verb": "WEST",
+            "target": "CROSSRIVER",
+            "condition": "sword",
           }
         ],
         "inventory": []
@@ -378,7 +422,7 @@
       },
       "FORE4": {
         "name": "Forest",
-        "desc": "This is a large forest, with trees obstructing all views except\r\nto the west, where a small clearing may be seen through the trees.",
+        "desc": "This is a large forest, with trees obstructing all views except\r\nto the west, where a small clearing and a cottage can be seen through the trees.",
         "exits": [
           {
             "verb": "UP",
@@ -408,80 +452,110 @@
         ],
         "inventory": []
       },
-      "FORE5": {
-        "name": "Forest",
-        "desc": "This is a forest, with trees in all directions around you.",
+      "COTTAGE": {
+        "name": "Small Cottage",
+        "desc": "This is a small stone cottage with a wooden door. It appears to be ajar. Do you wish to enter?",
         "exits": [
           {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
-          },
-          {
-            "verb": "NORTH",
-            "target": "FORE5",
-            "condition": ""
-          },
-          {
-            "verb": "SE",
-            "target": "CLTOP",
+            "verb": "ENTER",
+            "target": "LROOM",
             "condition": ""
           },
           {
             "verb": "SOUTH",
+            "target": "ELF",
+            "condition": ""
+          },
+          {
+            "verb": "NE",
+            "target": "FORE5",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
             "target": "FORE4",
             "condition": ""
           },
           {
             "verb": "WEST",
-            "target": "FORE2",
+            "target": "NoExit",
             "condition": ""
-          }
+          },
         ],
         "inventory": []
       },
-      "CLEAR": {
-        "name": "Clearing",
-        "desc": "",
+      "FORE5": {
+        "name": "Forest",
+        "desc": "This is more forest, with trees surrounding you from all directions. There is a particularly tall tree with many thick branches gradually circling the trunk in an upwards spiral.",
         "exits": [
           {
-            "verb": "SW",
-            "target": "EHOUS",
+            "verb": "UP",
+            "target": "TREE2",
+            "condition": ""
+          },
+          {
+            "verb": "NE",
+            "target": "TOWER",
             "condition": ""
           },
           {
             "verb": "SE",
+            "target": "FORE4",
+            "condition": ""
+          },
+          {
+            "verb": "SW",
+            "target": "COTTAGE",
+            "condition": ""
+          },
+        ],
+        "inventory": []
+      },
+      "TREE2": {
+        "name": "Up the Spiral Tree",
+        "desc": "You climb the tree and survive with only a few scrapes on your knees. You breach the canopy to see smoke coming from a chimney off to the South West and a tall brick tower to the NorthEast.",
+        "exits": [
+          {
+            "verb": "DOWN",
             "target": "FORE5",
             "condition": ""
           },
           {
-            "verb": "NORTH",
-            "target": "CLEAR",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "CLEAR",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "FORE3",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "FORE2",
-            "condition": ""
-          },
-          {
-            "verb": "DOWN",
-            "target": "MGRAT",
+            "verb": "UP",
+            "target": "NoExit",
             "condition": ""
           }
         ],
         "inventory": []
       },
+      "ELF": {
+        "name": "Kidnapped Elf",
+        "desc": "You're following the stream when you hear distant shouts. You approach cautiously to discover an elf tied to a tree with rope. Near the elf are two trolls who are debating the best way to cook elf. They're boiling a cauldron of water and their backs are turned away from the miserable elf.",
+        "exits": [
+          {
+            "verb": "WAVE",
+            "target": "GETELFATTENTION",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "COTTAGE",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "RIVER",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "HIDDENPASSAGE",
+            "condition": "Befriend Elf"
+          }
+        ],
+        "inventory": []
+      },
+                          
       "CELLA": {
         "name": "Cellar",
         "desc": "",
