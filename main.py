@@ -17,7 +17,7 @@ def render(game, current):
     r = game['rooms']
     c = r[current]
 
-    print('\n\nYou are in the {name}'.format(name=c['name']))
+    print('\n\nYou are {name}'.format(name=c['name']))
     print(c['desc'])
         # the render is figuring out where the person is by going from the rooms within the game (r = game ['rooms']), to current location to name and then itll say the description. Current is a variable but name and room are strings. 
     return True
@@ -49,7 +49,7 @@ def main():
     current = 'SCASTLE'
             # SCASTLE is starting location
     quit = False
-    tool = "sword"
+    tool = "sword, rope, rock"
     while not quit:
         #render
         render(game, current)
