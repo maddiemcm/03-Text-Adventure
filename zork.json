@@ -135,17 +135,17 @@
     ],
     "rooms": {
       "WCASTLE": {
-        "name": "West of Castle",
-        "desc": "This is an open field west of a stone castle, with a lifted drawbridge.",
+        "name": "West of Abandoned Castle",
+        "desc": "This is an open field west of a tall stone castle. There is no door on this side of the castle, but there is a lovely watch tower that is too tall to scale without a rope.",
         "exits": [
           {
             "verb": "NORTH",
-            "target": "NHOUS",
+            "target": "NCASTLE",
             "condition": ""
           },
           {
             "verb": "SOUTH",
-            "target": "SHOUS",
+            "target": "SCASTLE",
             "condition": ""
           },
           {
@@ -158,29 +158,21 @@
             "target": "NoExit",
             "condition": ""
           }
-          {
-            "verb": ""
-          }
         ],
         "inventory": []
       },
-      "NHOUS": {
-        "name": "North of House",
-        "desc": "You are facing the north side of a white house.  There is no door here,\r\nand all the windows are barred.",
+      "NCASTLE": {
+        "name": "North of Abandoned Castle",
+        "desc": "You are standing in a field, facing the north side of a tall stone castle. There is no door here,\r\nand all the windows are too tall to scale without a rope.",
         "exits": [
           {
             "verb": "WEST",
-            "target": "WHOUS_SWORD",
-            "condition": "sword"
-          },
-          {
-            "verb": "WEST",
-            "target": "WHOUS_GUN",
-            "condition": "gun"
+            "target": "WCASTLE",
+            "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "EHOUS",
+            "target": "ECASTLE",
             "condition": ""
           },
           {
@@ -196,18 +188,18 @@
         ],
         "inventory": []
       },
-      "SHOUS": {
-        "name": "South of House",
-        "desc": "You are facing the south side of a white house. There is no door here,\r\nand all the windows are barred.",
+      "SCASTLE": {
+        "name": "South of Abandoned Castle",
+        "desc": "You are standing in a field and facing the south side of a tall, stone castle. There is a large wooden drawbridge but it is lifted up,\r\nand all the windows are too tall to scale without rope.",
         "exits": [
           {
             "verb": "WEST",
-            "target": "WHOUS",
+            "target": "WCASTLE",
             "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "EHOUS",
+            "target": "ECASTLE",
             "condition": ""
           },
           {
@@ -217,127 +209,72 @@
           },
           {
             "verb": "NORTH",
-            "target": "NoExit",
+            "target": "DRWBRDG",
             "condition": ""
           }
         ],
         "inventory": []
       },
-      "EHOUS": {
-        "name": "Behind House",
-        "desc": "",
+      "ECASTLE": {
+        "name": "East of Castle",
+        "desc": "This is an open field east of a tall stone castle. There is no door on this side of the castle, but there is a lovely watch tower that is too tall to scale without a rope.",
         "exits": [
           {
             "verb": "NORTH",
-            "target": "NHOUS",
+            "target": "NCASTLE",
             "condition": ""
           },
           {
             "verb": "SOUTH",
-            "target": "SHOUS",
+            "target": "SCASTLE",
             "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "CLEAR",
+            "target": "RAVINE",
             "condition": ""
           },
           {
             "verb": "WEST",
-            "target": "KITCH",
-            "condition": ""
-          },
-          {
-            "verb": "ENTER",
-            "target": "KITCH",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "KITCH": {
-        "name": "Kitchen",
-        "desc": "",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "EHOUS",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "LROOM",
-            "condition": ""
-          },
-          {
-            "verb": "EXIT",
-            "target": "EHOUS",
-            "condition": ""
-          },
-          {
-            "verb": "UP",
-            "target": "ATTIC",
-            "condition": ""
-          },
-          {
-            "verb": "DOWN",
             "target": "NoExit",
             "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "ATTIC": {
-        "name": "Attic",
-        "desc": "This is the attic.  The only exit is stairs that lead down.",
-        "exits": [
-          {
-            "verb": "DOWN",
-            "target": "KITCH",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "LROOM": {
-        "name": "Living Room",
-        "desc": "",
-        "exits": [
-          {
-            "verb": "EAST",
-            "target": "KITCH",
-            "condition": ""
           },
+        ],
+        "inventory": []
+      },
+      "RAVINE": {
+        "name": "Ravine",
+        "desc": "This is a ravine. It's a beautiful ravine, but it's rather large and the river down there looks pretty threatening. You can't cross it. I recommend going another direction.",
+        "exits": [
           {
             "verb": "WEST",
-            "target": "BLROO",
+            "target": "ECASTLE",
             "condition": ""
           },
           {
-            "verb": "DOWN",
-            "target": "CELLA",
+            "verb": "NORTH",
+            "target": "FORE3",
             "condition": ""
-          }
-        ],
-        "inventory": []
-      },
+          },
+          {
+            "verb": "SOUTH",
+            "target": "FORE2",
+            "condition": ""
+          },
+        ]
+      }
       "FORE1": {
-        "name": "Forest",
-        "desc": "This is a forest, with trees in all directions around you.",
+        "name": "Forest to the West of the Castle",
+        "desc": "This is a forest, with somewhat tall trees surrounding you. Light peaks through the canopy, and there are footpaths leading to the north, west, and south. The sounds of a stream seem to be coming from further west.",
         "exits": [
           {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
-          },
-          {
             "verb": "NORTH",
-            "target": "FORE1",
+            "target": "FORE3",
             "condition": ""
           },
           {
-            "verb": "EAST",
-            "target": "FORE3",
+            "verb": "WEST",
+            "target": "STREAM",
             "condition": ""
           },
           {
@@ -346,16 +283,21 @@
             "condition": ""
           },
           {
-            "verb": "WEST",
-            "target": "FORE1",
+            "verb": "EAST",
+            "target": "WCASTLE",
             "condition": ""
           }
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
         ],
         "inventory": []
       },
       "FORE2": {
-        "name": "Forest",
-        "desc": "This is a dimly lit forest, with large trees all around.  To the\r\neast, there appears to be sunlight.",
+        "name": "Forest to the South of the Castle",
+        "desc": "This is a dimly lit forest, with large leafy trees surrounding you.  To the\r\nwest, there appears to be a footpath and sunlight.",
         "exits": [
           {
             "verb": "UP",
@@ -364,17 +306,17 @@
           },
           {
             "verb": "NORTH",
-            "target": "SHOUS",
+            "target": "SCASTLE",
             "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "CLEAR",
+            "target": "RAVINE",
             "condition": ""
           },
           {
             "verb": "SOUTH",
-            "target": "FORE4",
+            "target": "NoExit",
             "condition": ""
           },
           {
@@ -387,7 +329,7 @@
       },
       "FORE3": {
         "name": "Forest",
-        "desc": "This is a dimly lit forest, with large trees all around.  One\r\nparticularly large tree with some low branches stands here.",
+        "desc": "This is a dimly lit forest, with large, leafy green trees surrounding you. To the west there appears to be sunlight and a footpath. One\r\nparticularly large tree with some low branches stands here.",
         "exits": [
           {
             "verb": "UP",
@@ -396,22 +338,22 @@
           },
           {
             "verb": "NORTH",
-            "target": "FORE2",
+            "target": "FORE4",
             "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "CLEAR",
+            "target": "RAVINE",
             "condition": ""
           },
           {
             "verb": "SOUTH",
-            "target": "CLEAR",
+            "target": "NCASTLE",
             "condition": ""
           },
           {
             "verb": "WEST",
-            "target": "NHOUS",
+            "target": "FORE1",
             "condition": ""
           }
         ],
@@ -419,7 +361,7 @@
       },
       "TREE": {
         "name": "Up a Tree",
-        "desc": "",
+        "desc": "You've climbed the tree and breached the canopy to see smoke coming from a chimney off to the West.",
         "exits": [
           {
             "verb": "DOWN",
@@ -436,7 +378,7 @@
       },
       "FORE4": {
         "name": "Forest",
-        "desc": "This is a large forest, with trees obstructing all views except\r\nto the east, where a small clearing may be seen through the trees.",
+        "desc": "This is a large forest, with trees obstructing all views except\r\nto the west, where a small clearing may be seen through the trees.",
         "exits": [
           {
             "verb": "UP",
@@ -445,7 +387,7 @@
           },
           {
             "verb": "EAST",
-            "target": "CLTOP",
+            "target": "NoExit",
             "condition": ""
           },
           {
@@ -455,12 +397,12 @@
           },
           {
             "verb": "SOUTH",
-            "target": "FORE4",
+            "target": "FORE3",
             "condition": ""
           },
           {
             "verb": "WEST",
-            "target": "FORE2",
+            "target": "COTTAGE",
             "condition": ""
           }
         ],
