@@ -56,13 +56,17 @@
       },
       "STAND": {
         "name": "Introduction continued",
-        "desc": "\nYou take his hand, stand up, and take in your surroundings. \n\nFirst you notice the scattered, beaten and bloodied bodies lying in the fields around you.  You cringe and feel even more confused as you still can't recall a thing.  Then your eyes wander to a tall, stone castle to your North which looks like its seen better days.  The drawbridge is up, and the place doesn't seem at all inviting.  Despite the scene before you, the environment feels remarkably calm, and the birds sing as if nothing has happened.  You turn towards Sir Gerald only to realize he is significantly shorter than you first observed. You perceive him to be a dwarf and ask him what happened here. \n\nSir Gerald: 'Ain't it obvious?  There was a battle this morning - started late last night when the king was murdered.  According to the whispers, the kind was poisoned by his greedy no good brother.  Good thing I hid when I heard the shouts.  See, I'm only the royal treasurer; I don't have any battle experiience.  It's a shame though. He was a decent king.  Not too many of those as of late, someone's always hungerin' for power nowadays.  Too many arrogant, greedy kings...' the dwarf rambled. \n\nYou: 'So what am I supposed to do exactly? I don't even remember what happened.'\n\nSir Gerald: 'Well yer the last living knight of the former king, so I figure ya gotta find and rescue the princess.'\n\nYou: 'How will that help things?'\n\nSir Gerald: 'It might not, but the whispers say she's got some magical powers or somethin'.  Maybe she can restore peace?' He shrugs and starts to turn away. 'Well best of luck to ye.  Oh! Take this with ye on yer quest!' He hands you a lightweight, sharp steel sword that seemingly came from nowhere. It's so shiny that it seems as if it's never left the armory.  Although a bit shorter than you would have preferred, it'll serve you well, nevertheless.\n\nSir Gerald: 'Hopefully it'll be of some use to you - more than it's been to me at least. Farewell!'\n\nThe dwarf heads off into the woods to your South, away from the castle."},
+        "desc": "You take his hand, stand up, and take in your surroundings. \n\nFirst you notice the scattered, beaten and bloodied bodies lying in the fields around you.  You cringe and feel even more confused as you still can't recall a thing.  Then your eyes wander to a tall, stone castle to your North which looks like its seen better days.  The drawbridge is up, and the place doesn't seem at all inviting.  Despite the scene before you, the environment feels remarkably calm, and the birds sing as if nothing has happened.  You turn towards Sir Gerald only to realize he is significantly shorter than you first observed. You perceive him to be a dwarf and ask him what happened here. \n\nSir Gerald: 'Ain't it obvious?  There was a battle this morning - started late last night when the king was murdered.  According to the whispers, the kind was poisoned by his greedy no good brother.  Good thing I hid when I heard the shouts.  See, I'm only the royal treasurer; I don't have any battle experiience.  It's a shame though. He was a decent king.  Not too many of those as of late, someone's always hungerin' for power nowadays.  Too many arrogant, greedy kings...' the dwarf rambled. \n\nYou: 'So what am I supposed to do exactly? I don't even remember what happened.'\n\nSir Gerald: 'Well yer the last living knight of the former king, so I figure ya gotta find and rescue the princess.'\n\nYou: 'How will that help things?'\n\nSir Gerald: 'It might not, but the whispers say she's got some magical powers or somethin'.  Maybe she can restore peace?' He shrugs and starts to turn away. 'Well best of luck to ye.  Oh! Take this with ye on yer quest!' He hands you a lightweight, sharp steel sword that seemingly came from nowhere. It's so shiny that it seems as if it's never left the armory.  Although a bit shorter than you would have preferred, it'll serve you well, nevertheless.\n\nSir Gerald: 'Hopefully it'll be of some use to you - more than it's been to me at least. Farewell!'\n\nThe dwarf heads off into the woods to your South, away from the castle."},
         "exits": [
-          {"verb": "NORTH", "target": "SCASTLE", "condition": "" },
-          {"verb": "SOUTH", "target": "FORE2", "condition": ""} 
+          {
+            "verb": "NORTH", "target": "SCASTLE", "condition": "" 
+          },
+          {
+            "verb": "SOUTH", "target": "FORE2", "condition": ""
+          } 
         ],
         "inventory": []
-      },
+        },
       "GROUND": {
         "name": "Lying in a field awkwardly",
         "desc": "Sir Gerald stares at you curiously. You should probably take his hand before things get awkward.",
@@ -556,7 +560,8 @@
         "inventory": []
       }
 
-    }
+}
+
 
 
                           

@@ -1,4 +1,6 @@
 # 03-Text-Adventure
+README DOCUMENT
+[MADISON MCMULLEN] [2019]
 WELCOME TO XXX
 (a generally unadvisable game for indecisive players)
 
