@@ -6,7 +6,7 @@ WELCOME TO XXX
 
 What exactly is xxx you ask and why should you play it?
 
-    I'm so glad you asked! XXX is a text adventure game that takes place in a fairly small kingdom in some fantasy realm, entirely defined by the limits of the user's imagination. As the creator, I gave some description to each location featured in teh game to give the player a basic understanding of what they were encountering, but what those locations truly look like is entirely up to the player. You could imagine the world in minecraft style, classic manga black and white, or if you're really feeling it, maybe even a cartoon style like the Simpsons (if you are capable of making art depicting this please contact me I would love to see that.) 
+    I'm so glad you asked! XXX is a text adventure game that takes place in a fairly small kingdom in some fantasy realm, entirely defined by the limits of the user's imagination. As the creator, I gave some description to each location featured in the game to give the player a basic understanding of what they were encountering, but what those locations truly look like is entirely up to the player. You could imagine the world in minecraft style, classic manga black and white, or if you're really feeling it, maybe even a cartoon style like the Simpsons (if you are capable of making art depicting this please contact me I would love to see that.) 
 
     The basic goal of the game (not at all influenced by Mario, Peach and Donkey kong - I swear it) is to rescue the princess. Sort of. Play it and you'll see :)
 
@@ -54,7 +54,7 @@ HINTS
 2. River
 3. Smoke
 4. Tall stone thing
-4. Door that opems vertically
+4. Door that opens vertically
 5. sike its actually the wall
 6. "You should see me in a crown" (love Billie Eilish)
 

@@ -29,12 +29,12 @@
       { "v": "CROSS",   "map": "CROSS"  },
       { "v": "TAKE",    "map": "TAKE"   },
       { "v": "GET",     "map": "TAKE"   },
-      { "v": "CONTINUE","map": "CONTINUE"},
+      { "v": "CONTINUE","map": "CONTINUE" },
       { "v": "RIGHT",   "map": "RIGHT"  },
       { "v": "RETURN",  "map": "RETURN" },
       { "v": "BACK",    "map": "BACK"   },
-      { "v": "TAKE HAND", "map": "TAKE HAND"},
-      { "v": "REJECT HAND", "map": "REJECT HAND"}
+      { "v": "TAKE",    "map": "TAKE"   },
+      { "v": "REJECT",  "map": "REJECT" }
      ],
     "rooms": {
       "START": {
@@ -42,12 +42,12 @@
         "desc": "'Ah you've awoken! It's about time!' You blink rapidly and your eyes begin to focus on a short and stout man.  He has a crooked nose, a scruffy beard, a bloodied brow and an overall ragged appearance.  You don't recognize him or remember how you wound up in the field.  You ask him who he is.\n\nStrange man: 'Ay Lad, I'm Sir Gerald the Grande.  If ye don't know who I am then you must've gotten hit in the noggin pretty hard.  I've seen you around the castle plenty a times.' \n\nHe offers you his hand.",
         "exits": [
           {
-            "verb": "TAKE HAND",
+            "verb": "TAKE",
             "target": "STAND",
             "condition": ""
           },
           {
-            "verb": "REJECT HAND",
+            "verb": "REJECT",
             "target": "GROUND",
             "condition": ""
           }
@@ -56,13 +56,17 @@
       },
       "STAND": {
         "name": "Introduction continued",
-        "desc": "You take his hand, stand up, and take in your surroundings. \n\nFirst you notice the scattered, beaten and bloodied bodies lying in the fields around you.  You cringe and feel even more confused as you still can't recall a thing.  Then your eyes wander to a tall, stone castle to your North which looks like its seen better days.  The drawbridge is up, and the place doesn't seem at all inviting.  Despite the scene before you, the environment feels remarkably calm, and the birds sing as if nothing has happened.  You turn towards Sir Gerald only to realize he is significantly shorter than you first observed. You perceive him to be a dwarf and ask him what happened here. \n\nSir Gerald: 'Ain't it obvious?  There was a battle this morning - started late last night when the king was murdered.  According to the whispers, the kind was poisoned by his greedy no good brother.  Good thing I hid when I heard the shouts.  See, I'm only the royal treasurer; I don't have any battle experiience.  It's a shame though. He was a decent king.  Not too many of those as of late, someone's always hungerin' for power nowadays.  Too many arrogant, greedy kings...' the dwarf rambled. \n\nYou: 'So what am I supposed to do exactly? I don't even remember what happened.'\n\nSir Gerald: 'Well yer the last living knight of the former king, so I figure ya gotta find and rescue the princess.'\n\nYou: 'How will that help things?'\n\nSir Gerald: 'It might not, but the whispers say she's got some magical powers or somethin'.  Maybe she can restore peace?' He shrugs and starts to turn away. 'Well best of luck to ye.  Oh! Take this with ye on yer quest!' He hands you a lightweight, sharp steel sword that seemingly came from nowhere. It's so shiny that it seems as if it's never left the armory.  Although a bit shorter than you would have preferred, it'll serve you well, nevertheless.\n\nSir Gerald: 'Hopefully it'll be of some use to you - more than it's been to me at least. Farewell!'\n\nThe dwarf heads off into the woods to your South, away from the castle."},
+        "desc": "You take his hand, stand up, and take in your surroundings. \n\nFirst you notice the scattered, beaten and bloodied bodies lying in the fields around you.  You cringe and feel even more confused as you still can't recall a thing.  Then your eyes wander to a tall, stone castle to your North which looks like its seen better days.  The drawbridge is up, and the place doesn't seem at all inviting.  Despite the scene before you, the environment feels remarkably calm, and the birds sing as if nothing has happened.  You turn towards Sir Gerald only to realize he is significantly shorter than you first observed. You perceive him to be a dwarf and ask him what happened here. \n\nSir Gerald: 'Ain't it obvious?  There was a battle this morning - started late last night when the king was murdered.  According to the whispers, the kind was poisoned by his greedy no good brother.  Good thing I hid when I heard the shouts.  See, I'm only the royal treasurer; I don't have any battle experiience.  It's a shame though. He was a decent king.  Not too many of those as of late, someone's always hungerin' for power nowadays.  Too many arrogant, greedy kings...' the dwarf rambled. \n\nYou: 'So what am I supposed to do exactly? I don't even remember what happened.'\n\nSir Gerald: 'Well yer the last living knight of the former king, so I figure ya gotta find and rescue the princess.'\n\nYou: 'How will that help things?'\n\nSir Gerald: 'It might not, but the whispers say she's got some magical powers or somethin'.  Maybe she can restore peace?' He shrugs and starts to turn away. 'Well best of luck to ye.  Oh! Take this with ye on yer quest!' He hands you a lightweight, sharp steel sword that seemingly came from nowhere. It's so shiny that it seems as if it's never left the armory.  Although a bit shorter than you would have preferred, it'll serve you well, nevertheless.\n\nSir Gerald: 'Hopefully it'll be of some use to you - more than it's been to me at least. Farewell!'\n\nThe dwarf heads off into the woods to your South, away from the castle.",
         "exits": [
           {
-            "verb": "NORTH", "target": "SCASTLE", "condition": "" 
+            "verb": "NORTH",
+            "target": "SCASTLE",
+            "condition": "" 
           },
           {
-            "verb": "SOUTH", "target": "FORE2", "condition": ""
+            "verb": "SOUTH",
+            "target": "FORE2",
+            "condition": ""
           } 
         ],
         "inventory": []
@@ -71,7 +75,9 @@
         "name": "Lying in a field awkwardly",
         "desc": "Sir Gerald stares at you curiously. You should probably take his hand before things get awkward.",
         "exits": [
-          {"verb": "TAKE HAND", "target": "STAND", "condition": ""}
+          {"verb": "TAKE", 
+            "target": "STAND",
+            "condition": ""}
         ],
         "inventory": []
       },
@@ -251,7 +257,7 @@
       },
       "FORE2": {
         "name": "Forest South of Castle",
-        "desc": "This is a dimly lit forest, with large leafy trees surrounding you.  To the\r\nwest, there appears to be a footpath and sunlight. check field for sword",
+        "desc": "This is a dimly lit forest, with large leafy trees surrounding you.  To the\r\nwest, there appears to be a footpath and sunlight.",
         "exits": [
           {
             "verb": "UP",
@@ -553,14 +559,27 @@
         ],
         "inventory": []
       },
+      "THRONE": {
+        "name": "Throne Room",
+        "desc": "Welcome to the boss battle!!! ",
+        "exits": [
+          {
+            "verb": "",
+            "target": "",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
       "END": {
         "name": "END",
-        "desc": "Woops you perished.",
+        "desc": "Whoops you perished.",
         "exits": [],
         "inventory": []
       }
-
+    }
 }
+
 
 
 
