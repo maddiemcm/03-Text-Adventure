@@ -1,157 +1,78 @@
 {
     "verbs": [
-      {
-        "v": "EXITS",
-        "map": "EXITS"
-      },
-      {
-        "v": "QUIT",
-        "map": "QUIT"
-      },
-      {
-        "v": "Q",
-        "map": "QUIT"
-      },
-      {
-        "v": "GET ME OUT OF HERE!",
-        "map": "QUIT"
-      },
-      {
-        "v": "NORTH",
-        "map": "NORTH"
-      },
-      {
-        "v": "N",
-        "map": "NORTH"
-      },
-      {
-        "v": "SOUTH",
-        "map": "SOUTH"
-      },
-      {
-        "v": "S",
-        "map": "SOUTH"
-      },
-      {
-        "v": "EAST",
-        "map": "EAST"
-      },
-      {
-        "v": "E",
-        "map": "EAST"
-      },
-      {
-        "v": "WEST",
-        "map": "WEST"
-      },
-      {
-        "v": "W",
-        "map": "WEST"
-      },
-      {
-        "v": "NE",
-        "map": "NE"
-      },
-      {
-        "v": "NORTHEAST",
-        "map": "NE"
-      },
-      {
-        "v": "NW",
-        "map": "NW"
-      },
-      {
-        "v": "NORTHWEST",
-        "map": "NW"
-      },
-      {
-        "v": "SE",
-        "map": "SE"
-      },
-      {
-        "v": "SOUTHEAST",
-        "map": "SE"
-      },
-      {
-        "v": "SOUTHWEST",
-        "map": "SW"
-      },
-      {
-        "v": "UP",
-        "map": "UP"
-      },
-      {
-        "v": "U",
-        "map": "UP"
-      },
-      {
-        "v": "DOWN",
-        "map": "DOWN"
-      },
-      {
-        "v": "D",
-        "map": "DOWN"
-      },
-      {
-        "v": "ENTER",
-        "map": "ENTER"
-      },
-      {
-        "v": "OUT",
-        "map": "OUT"
-      },
-      {
-        "v": "EXIT",
-        "map": "EXIT"
-      },
-      {
-        "v": "LEAVE",
-        "map": "LEAVE"
-      },
-      {
-        "v": "LAND",
-        "map": "LAND"
-      },
-      {
-        "v": "#!#!#",
-        "map": "#!#!#"
-      },
-      {
-        "v": "LAUNC",
-        "map": "LAUNC"
-      },
-      {
-        "v": "CROSS",
-        "map": "CROSS"
-      },
-      {
-        "v": "TAKE",
-        "map": "TAKE"
-      },
-      {
-        "v": "GET",
-        "map": "TAKE"
-      }
-      {
-        "v": "CONTINUE",
-        "map": "CONTINUE"
-      }
-      {
-        "v": "RIGHT",
-        "map": "RIGHT"
-      }
-      {
-        "v": "RETURN",
-        "map": "RETURN"
-      }
-      {
-        "v": "BACK",
-        "map": "BACK"
-      }
-    ],
+      { "v": "EXITS",  "map": "EXITS"   },
+      { "v": "QUIT",   "map": "QUIT"    },
+      { "v": "Q",      "map": "QUIT"    },
+      { "v": "NORTH",  "map": "NORTH"   },
+      { "v": "N",      "map": "NORTH"   },
+      { "v": "SOUTH",  "map": "SOUTH"   },
+      { "v": "S",      "map": "SOUTH"   },
+      { "v": "EAST",   "map": "EAST"    },
+      { "v": "E",      "map": "EAST"    },
+      { "v": "WEST",   "map": "WEST"    },
+      { "v": "W",      "map": "WEST"    },
+      { "v": "NE",     "map": "NE"      },
+      { "v": "NORTHEAST",  "map": "NE"  },
+      { "v": "NW",      "map": "NW"     },
+      { "v": "NORTHWEST",  "map": "NW"  },
+      { "v": "SE",      "map": "SE"     },
+      { "v": "SOUTHEAST",  "map": "SE"  },
+      { "v": "SOUTHWEST", "map": "SW"   },
+      { "v": "UP",      "map": "UP"     },
+      { "v": "U",       "map": "UP"     },
+      { "v": "DOWN",    "map": "DOWN"   },
+      { "v": "D",       "map": "DOWN"   },
+      { "v": "ENTER",   "map": "ENTER"  },
+      { "v": "OUT",     "map": "OUT"    },
+      { "v": "EXIT",    "map": "EXIT"   },
+      { "v": "LEAVE",   "map": "LEAVE"  },
+      { "v": "CROSS",   "map": "CROSS"  },
+      { "v": "TAKE",    "map": "TAKE"   },
+      { "v": "GET",     "map": "TAKE"   },
+      { "v": "CONTINUE","map": "CONTINUE"},
+      { "v": "RIGHT",   "map": "RIGHT"  },
+      { "v": "RETURN",  "map": "RETURN" },
+      { "v": "BACK",    "map": "BACK"   },
+      { "v": "TAKE HAND", "map": "TAKE HAND"},
+      { "v": "REJECT HAND", "map": "REJECT HAND"}
+     ],
     "rooms": {
+      "START": {
+        "name": "Introduction",
+        "desc": "'Ah you've awoken! It's about time!' You blink rapidly and your eyes begin to focus on a short and stout man.  He has a crooked nose, a scruffy beard, a bloodied brow and an overall ragged appearance.  You don't recognize him or remember how you wound up in the field.  You ask him who he is.\n\nStrange man: 'Ay Lad, I'm Sir Gerald the Grande.  If ye don't know who I am then you must've gotten hit in the noggin pretty hard.  I've seen you around the castle plenty a times.' \n\nHe offers you his hand.",
+        "exits": [
+          {
+            "verb": "TAKE HAND",
+            "target": "STAND",
+            "condition": ""
+          },
+          {
+            "verb": "REJECT HAND",
+            "target": "GROUND",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "STAND": {
+        "name": "Introduction continued",
+        "desc": "\nYou take his hand, stand up, and take in your surroundings. \n\nFirst you notice the scattered, beaten and bloodied bodies lying in the fields around you.  You cringe and feel even more confused as you still can't recall a thing.  Then your eyes wander to a tall, stone castle to your North which looks like its seen better days.  The drawbridge is up, and the place doesn't seem at all inviting.  Despite the scene before you, the environment feels remarkably calm, and the birds sing as if nothing has happened.  You turn towards Sir Gerald only to realize he is significantly shorter than you first observed. You perceive him to be a dwarf and ask him what happened here. \n\nSir Gerald: 'Ain't it obvious?  There was a battle this morning - started late last night when the king was murdered.  According to the whispers, the kind was poisoned by his greedy no good brother.  Good thing I hid when I heard the shouts.  See, I'm only the royal treasurer; I don't have any battle experiience.  It's a shame though. He was a decent king.  Not too many of those as of late, someone's always hungerin' for power nowadays.  Too many arrogant, greedy kings...' the dwarf rambled. \n\nYou: 'So what am I supposed to do exactly? I don't even remember what happened.'\n\nSir Gerald: 'Well yer the last living knight of the former king, so I figure ya gotta find and rescue the princess.'\n\nYou: 'How will that help things?'\n\nSir Gerald: 'It might not, but the whispers say she's got some magical powers or somethin'.  Maybe she can restore peace?' He shrugs and starts to turn away. 'Well best of luck to ye.  Oh! Take this with ye on yer quest!' He hands you a lightweight, sharp steel sword that seemingly came from nowhere. It's so shiny that it seems as if it's never left the armory.  Although a bit shorter than you would have preferred, it'll serve you well, nevertheless.\n\nSir Gerald: 'Hopefully it'll be of some use to you - more than it's been to me at least. Farewell!'\n\nThe dwarf heads off into the woods to your South, away from the castle."},
+        "exits": [
+          {"verb": "NORTH", "target": "SCASTLE", "condition": "" },
+          {"verb": "SOUTH", "target": "FORE2", "condition": ""} 
+        ],
+        "inventory": []
+      },
+      "GROUND": {
+        "name": "Lying in a field awkwardly",
+        "desc": "Sir Gerald stares at you curiously. You should probably take his hand before things get awkward.",
+        "exits": [
+          {"verb": "TAKE HAND", "target": "STAND", "condition": ""}
+        ],
+        "inventory": []
+      },
       "WCASTLE": {
-        "name": "to the west of the abandoned castle",
+        "name": "West of the Castle",
         "desc": "This is an open field west of a tall stone castle. There is no door on this side of the castle, and the walls are to high to scale without rope.",
         "exits": [
           {
@@ -168,18 +89,12 @@
             "verb": "WEST",
             "target": "FORE1",
             "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "NoExit",
-            "condition": ""
           }
-
         ],
         "inventory": []
       },
       "NCASTLE": {
-        "name": "to the north of the abandoned castle",
+        "name": "North of the Castle",
         "desc": "You are standing in a field, facing the north side of a tall stone castle. There is no door here,\r\nand all the windows are too tall to scale without a rope.",
         "exits": [
           {
@@ -206,7 +121,7 @@
         "inventory": []
       },
       "SCASTLE": {
-        "name": "to the south of the abandoned castle",
+        "name": "South of the Castle",
         "desc": "You are standing in a field and facing the south side of a tall, stone castle. There is a large wooden drawbridge but it is lifted up,\r\nand all the windows are too tall to scale without rope.",
         "exits": [
           {
@@ -233,7 +148,7 @@
         "inventory": []
       },
       "ECASTLE": {
-        "name": "to the east of the abandoned castle",
+        "name": "East of the Castle",
         "desc": "This is an open field east of a tall stone castle. There is no door on this side of the castle, but there is a lovely watch tower that is too tall to scale without a rope.",
         "exits": [
           {
@@ -260,7 +175,7 @@
         "inventory": []
       },
       "DRWBRDG": {
-        "name": "in front of the drawbridge to the abandoned castle",
+        "name": "Drawbridge: entrance to the Castle",
         "desc": "This a drawbridge. It can only be opened from the inside of the castle.",
         "exits": [
           {
@@ -277,7 +192,7 @@
         "inventory": []
       },
       "RAVINE": {
-        "name": "in a field overlooking a ravine",
+        "name": "A field overlooking a perilous ravine",
         "desc": "It's a beautiful ravine, but it's rather large and the river down there looks pretty threatening. You can't cross it. I recommend going another direction.",
         "exits": [
           {
@@ -299,7 +214,7 @@
         "inventory": []
       },
       "FORE1": {
-        "name": "in forest to the west of the abandoned castle",
+        "name": "Forest West of Castle",
         "desc": "This is a forest, with somewhat tall trees surrounding you. Light peaks through the canopy, and there are footpaths leading to the north, west, and south. The sounds of a river seem to be coming from further west.",
         "exits": [
           {
@@ -331,8 +246,8 @@
         "inventory": []
       },
       "FORE2": {
-        "name": "in forest to the south of the abandoned castle",
-        "desc": "This is a dimly lit forest, with large leafy trees surrounding you.  To the\r\nwest, there appears to be a footpath and sunlight. You notice something glinting in the light.",
+        "name": "Forest South of Castle",
+        "desc": "This is a dimly lit forest, with large leafy trees surrounding you.  To the\r\nwest, there appears to be a footpath and sunlight. check field for sword",
         "exits": [
           {
             "verb": "UP",
@@ -361,14 +276,14 @@
           },
           {
             "verb": "INVESTIGATE",
-            "target": "Object",
+            "target": "sword",
             "condition": ""
           }
         ],
         "inventory": []
       },
       "RIVER": {
-        "name": "beside a river",
+        "name": "Riverbank",
         "desc": "This is a wide but calm river. You might be able to cross it, but the bushes on the other side are too thick. You would need a sword to cut through them. To the north of the river you see a footpath. To your south, there's a steep wall of a mountain. You can't go this way.",
         "exits": [
           {
@@ -405,7 +320,7 @@
         "inventory": []
       },
       "FORE3": {
-        "name": "in forest to the north of the abandoned castle",
+        "name": "Forest North of Castle",
         "desc": "This is a dimly lit forest, with large, leafy green trees surrounding you. To the west there appears to be sunlight and a footpath. One\r\nparticularly large tree with some low branches stands here.",
         "exits": [
           {
@@ -454,7 +369,7 @@
         "inventory": []
       },
       "FORE4": {
-        "name": "in forest to the far north of the abandoned castle",
+        "name": "Forest far north of Castle",
         "desc": "This is a large forest, with trees obstructing all views except\r\nto the west, where a small clearing and a cottage can be seen through the trees.",
         "exits": [
           {
@@ -486,8 +401,8 @@
         "inventory": []
       },
       "COTTAGE": {
-        "name": "near a small cottage",
-        "desc": "This is a small stone cottage with a wooden door. It appears to be ajar. Do you wish to enter?",
+        "name": "Small cottage",
+        "desc": "This is a small stone cottage. The door appears to be ajar, and there's a little smoke coming from the chimney.",
         "exits": [
           {
             "verb": "ENTER",
@@ -511,7 +426,7 @@
           },
           {
             "verb": "WEST",
-            "target": "NoExit",
+            "target": "Not an option. Try again.",
             "condition": ""
           }
         ],
@@ -519,7 +434,7 @@
       },
       "LROOM": {
         "name": "in the living room of a small cottage",
-        "desc": "You enter the cottage and walk into the living room. There doesn't seem to be much here except an old rocking chair, a small circular wooden table with basic wood chairs and a worn out rug. If you continue, you'll enter the bedroom. If you go right, you enter the kitchen.",
+        "desc": "You enter the cottage and walk into the living room. There doesn't seem to be much here except an old rocking chair, a small circular wooden table with basic wood chairs and a worn out rug. It seems as though the previous owners left in a hurry. If you continue, you'll enter the bedroom. If you go right, you enter the kitchen.",
         "exits": [
           {
             "verb": "RIGHT",
@@ -558,7 +473,7 @@
       },
       "KITCH": {
         "name": "in the kitchen of a small cottage",
-        "desc": "There's a coal stove in the corner and it's cold. No one has cooked with it in awhile. There's also a counter, a small makeshift tin sink, and a tiny window facing east towards... a tower?",
+        "desc": "There's a coal stove in the corner with a few burning embers. It seems as though it hasn't been used in several hours. There's also a counter, a small makeshift tin sink, and a tiny window facing east towards... a tower?",
         "exits": [
           {
             "verb": "RETURN",
@@ -618,7 +533,7 @@
         "exits": [
           {
             "verb": "WAVE",
-            "target": "GETELFATTENTION",
+            "target": "ATTENTION",
             "condition": ""
           },
           {
@@ -630,17 +545,19 @@
             "verb": "SOUTH",
             "target": "RIVER",
             "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "HIDDENPASSAGE",
-            "condition": "Befriend Elf"
           }
         ],
         "inventory": []
+      },
+      "END": {
+        "name": "you died",
+        "desc": "Woops you perished.",
+        "exits": [],
+        "inventory": []
       }
+
     }
-  }
+
 
                           
       

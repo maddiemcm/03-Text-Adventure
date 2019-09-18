@@ -17,9 +17,8 @@ def render(game, current):
     r = game['rooms']
     c = r[current]
 
-    print('\n\nYou are {name}'.format(name=c['name']))
+    print('\n\n{name}'.format(name=c['name']))
     print(c['desc'])
-        # the render is figuring out where the person is by going from the rooms within the game (r = game ['rooms']), to current location to name and then itll say the description. Current is a variable but name and room are strings. 
     return True
 
 def checkInput():
@@ -30,9 +29,6 @@ def checkInput():
 
 def update(response, game, current, tool):
     '''Update our location, if possible, etc. '''
-    #verbs are north, south, east, west
-    #targets are the location you are targetting 
-    #exits represent transition between rooms based on verbs/input
     for e in game['rooms'][current]['exits']:
         if e['condition'] == '' or e['condition'] == tool:
             if e['verb'] == response:
@@ -46,8 +42,7 @@ def main():
         game = json.load(json_file)
     # Your game goes here!
 
-    current = 'SCASTLE'
-            # SCASTLE is starting location
+    current = 'START'
     quit = False
     tool = "sword, rope, rock"
     while not quit:
