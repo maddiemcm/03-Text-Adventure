@@ -554,7 +554,7 @@
         "inventory": []
       },
       "END": {
-        "name": "you died",
+        "name": "END",
         "desc": "Woops you perished.",
         "exits": [],
         "inventory": []
