@@ -33,8 +33,14 @@ CONTINUE
 RIGHT
 RETURN
 BACK
-TAKE HAND
-REJECT HAND
+REJECT
+THROW
+DISTRACT
+HELP
+CUT ROPE
+COONVINCE
+GIVE UP
+FOLLOW
 
 CARDINAL DIRECTIONS: NOT ALL ARE USED (haha cheaters)
 
@@ -54,9 +60,8 @@ HINTS
 2. River
 3. Smoke
 4. Tall stone thing
-4. Door that opens vertically
-5. sike its actually the wall
-6. "You should see me in a crown" (love Billie Eilish)
+4. CONVINCE!
+5. "You should see me in a crown" (love Billie Eilish)
 
 *** Avoid attacking the trolls ***
 

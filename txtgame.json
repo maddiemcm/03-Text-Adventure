@@ -33,7 +33,6 @@
       { "v": "RIGHT",   "map": "RIGHT"  },
       { "v": "RETURN",  "map": "RETURN" },
       { "v": "BACK",    "map": "BACK"   },
-      { "v": "TAKE",    "map": "TAKE"   },
       { "v": "REJECT",  "map": "REJECT" },
       { "v": "THROW",   "map": "THROW"  },
       { "v": "DISTRACT", "map": "DISTRACT"},
@@ -608,48 +607,57 @@
         ]
       },
       "SECRETTUNNEL": {
-
+        "name": "Secret tunnel into the kitchen",
+        "desc": "There isn't much here to be honest. Dirt floors, old stone walls, the usual tunnel. It smells quite musty and your footsteps echo. You decide you aren't a big fan of tunnels.",
+        "exits": [
+          {
+            "verb": "CONTINUE",
+            "target": "CKITCH"
+          }
+        ]
       },
-      "CKITCH": {},
+      "CKITCH": {
+        "name": "Castle Kitchen",
+        "desc": "The tunnel leads up to a big wooden door. It looks like the door to a cellar. The princess does a special knock and after several minutes of repeated knoocking, finally someone opens the door. Thankfully, it's friendly kitchen staff. They speak with the princess and inform her about her uncle's doings and suddenly she's furious again. Something about how she hadn't believed me because I was showing up to a tower in the middle of nowhere, and I didn't have credibility and blah blah blah. The point is, she's been in that tower for maybe 3 years and she only trusts those she knows. Once the kitchen staff confirmed the story, the princess was ready to raise hell. She bursts through the kitchen doors, storming towards the throne room to take back her crown.",
+        "exits": [
+          {
+            "verb": "CONTINUE",
+            "target": "THRONE"
+          }
+        ]
+      },
       "THRONE": {
         "name": "Throne Room",
-        "desc": "Welcome to the boss battle!!! In the north corner we have your villain! It's none other than the princess's uncle! Awkard.\nIn the other corner we have the princess herself and boy does she look angry!\nHow do you win you wonder? It's easy! Rock, paper, scissors! There's been enough battle lately and who wants to kill their family - even if they did already murder your father, the king, their brother... hamlet anyone? Anywho! Loser gets prison for life! On the count of 3!\nEvil uncle: 'On three or after three?'\nOn three Thomas! :/ duh.\nThomas: 'If I win, you die first.'\n...\nOne... Two... Three...",
+        "desc": "Welcome to the boss battle!!! In the north corner we have your villain! It's none other than the princess's uncle! Awkard.\nIn the other corner we have the princess herself and boy does she look angry!\nHow do you win, you wonder? It's easy! Rock, paper, scissors! There's been enough battle lately and who wants to kill their family - even if one of our two competitors has already done just that... Anywho! Loser gets prison for life (and since you're in association with the princess - that means you too!) On the count of 3!\nOne... Two... Three...",
         "exits": [
           {
             "verb": "ROCK",
-            "target": "WIN",
-            "condition": "response = win"
+            "target": "WIN"
           },
           {
             "verb": "PAPER",
-            "target": "WIN",
-            "condition": "response = win"
+            "target": "WIN"
           },
           {
             "verb": "SCISSORS",
-            "target": "WIN",
+            "target": "LOSE",
             "condition": "response = win"
-          },
-          {
-          "verb": "ROCK",
-          "target": "LOSE",
-          "condition": "response = win"
-          },
-          {
-          "verb": "PAPER",
-          "target": "LOSE",
-          "condition": "response = win"
-          },
-          {
-          "verb": "SCISSORS",
-          "target": "LOSE",
-          "condition": "response = win"
           }
         ]
       },
       "END": {
         "name": "END",
         "desc": "Whoops you perished.",
+        "exits": []
+      },
+      "WIN": {
+        "name": "END",
+        "desc": "Congrats! You won rock paper scissors and it is safe to assume that you got your cushy castle life!",
+        "exits": []
+      },
+      "LOSE": {
+        "name": "END",
+        "desc": "Enjoy a lifetime in prison!d",
         "exits": []
       }
     }

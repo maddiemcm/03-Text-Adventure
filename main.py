@@ -42,11 +42,7 @@ def update(response, game, current):
                 return e['target']
     print("\nYou can't do that. Try something else.")        
     return current
-    battle = ["rock", "paper", "scissors"]
-    win = random.choice(battle)
-    while current == 'THRONE':
-        if response = win, 
-        return 'WIN'
+
 
 
         
