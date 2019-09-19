@@ -42,6 +42,15 @@ def update(response, game, current):
                 return e['target']
     print("\nYou can't do that. Try something else.")        
     return current
+    battle = ["rock", "paper", "scissors"]
+    win = random.choice(battle)
+    while current == 'THRONE':
+        if response = win, 
+        return 'WIN'
+
+
+        
+        
 
 
 def main():
@@ -55,14 +64,13 @@ def main():
     moves = 0
     while not quit:
         #render
-        render(game, current,moves)
+        render(game, current, moves)
         #check player input
         response = checkInput()
         #update
         current = update(response, game, current)
         moves = moves+1
     return True
-# condition statements is so certain actions are made available with acquired inventory
 
 
 #if we are running this from the command line, run main

@@ -34,7 +34,14 @@
       { "v": "RETURN",  "map": "RETURN" },
       { "v": "BACK",    "map": "BACK"   },
       { "v": "TAKE",    "map": "TAKE"   },
-      { "v": "REJECT",  "map": "REJECT" }
+      { "v": "REJECT",  "map": "REJECT" },
+      { "v": "THROW",   "map": "THROW"  },
+      { "v": "DISTRACT", "map": "DISTRACT"},
+      { "v": "HELP",   "map": "HELP"},
+      {"v": "CUT ROPE", "map": "CUT ROPE" },
+      {"v": "CONVINCE", "map": "COONVINCE" },
+      {"v": "GIVE UP", "map": "GIVE UP" },
+      {"v": "FOLLOW", "map": "FOLLOW" }
      ],
     "rooms": {
       "START": {
@@ -43,16 +50,13 @@
         "exits": [
           {
             "verb": "TAKE",
-            "target": "STAND",
-            "condition": ""
+            "target": "STAND"
           },
           {
             "verb": "REJECT",
-            "target": "GROUND",
-            "condition": ""
+            "target": "GROUND"
           }
-        ],
-        "inventory": []
+        ]
       },
       "STAND": {
         "name": "Introduction continued",
@@ -60,26 +64,23 @@
         "exits": [
           {
             "verb": "NORTH",
-            "target": "SCASTLE",
-            "condition": "" 
+            "target": "SCASTLE"
           },
           {
             "verb": "SOUTH",
-            "target": "FORE2",
-            "condition": ""
+            "target": "FORE2"
           } 
-        ],
-        "inventory": []
+        ]
         },
       "GROUND": {
         "name": "Lying in a field awkwardly",
         "desc": "Sir Gerald stares at you curiously. You should probably take his hand before things get awkward.",
         "exits": [
-          {"verb": "TAKE", 
-            "target": "STAND",
-            "condition": ""}
-        ],
-        "inventory": []
+          {
+            "verb": "TAKE", 
+            "target": "STAND"
+          }
+        ]
       },
       "WCASTLE": {
         "name": "West of the Castle",
@@ -87,21 +88,17 @@
         "exits": [
           {
             "verb": "NORTH",
-            "target": "NCASTLE",
-            "condition": ""
+            "target": "NCASTLE"
           },
           {
             "verb": "SOUTH",
-            "target": "SCASTLE",
-            "condition": ""
+            "target": "SCASTLE"
           },
           {
             "verb": "WEST",
-            "target": "FORE1",
-            "condition": ""
+            "target": "FORE1"
           }
-        ],
-        "inventory": []
+        ]
       },
       "NCASTLE": {
         "name": "North of the Castle",
@@ -109,26 +106,17 @@
         "exits": [
           {
             "verb": "WEST",
-            "target": "WCASTLE",
-            "condition": ""
+            "target": "WCASTLE"
           },
           {
             "verb": "EAST",
-            "target": "ECASTLE",
-            "condition": ""
+            "target": "ECASTLE"
           },
           {
             "verb": "NORTH",
-            "target": "FORE3",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "NoExit",
-            "condition": ""
+            "target": "FORE3"
           }
-        ],
-        "inventory": []
+        ]
       },
       "SCASTLE": {
         "name": "South of the Castle",
@@ -136,26 +124,21 @@
         "exits": [
           {
             "verb": "WEST",
-            "target": "WCASTLE",
-            "condition": ""
+            "target": "WCASTLE"
           },
           {
             "verb": "EAST",
-            "target": "ECASTLE",
-            "condition": ""
+            "target": "ECASTLE"
           },
           {
             "verb": "SOUTH",
-            "target": "FORE2",
-            "condition": ""
+            "target": "FORE2"
           },
           {
             "verb": "NORTH",
-            "target": "DRWBRDG",
-            "condition": ""
+            "target": "DRWBRDG"
           }
-        ],
-        "inventory": []
+        ]
       },
       "ECASTLE": {
         "name": "East of the Castle",
@@ -163,43 +146,27 @@
         "exits": [
           {
             "verb": "NORTH",
-            "target": "NCASTLE",
-            "condition": ""
+            "target": "NCASTLE"
           },
           {
             "verb": "SOUTH",
-            "target": "SCASTLE",
-            "condition": ""
+            "target": "SCASTLE"
           },
           {
             "verb": "EAST",
-            "target": "RAVINE",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "NoExit",
-            "condition": ""
+            "target": "RAVINE"
           }
-        ],
-        "inventory": []
+        ]
       },
       "DRWBRDG": {
         "name": "Drawbridge: entrance to the Castle",
         "desc": "This a drawbridge. It can only be opened from the inside of the castle.",
         "exits": [
           {
-            "verb": "UP",
-            "target": "SCALEWALL",
-            "condition": "rope"
-          },
-          {
             "verb": "SOUTH",
-            "target": "SCASTLE",
-            "condition": ""
+            "target": "SCASTLE"
           }
-        ],
-        "inventory": []
+        ]
       },
       "RAVINE": {
         "name": "A field overlooking a perilous ravine",
@@ -207,21 +174,17 @@
         "exits": [
           {
             "verb": "WEST",
-            "target": "ECASTLE",
-            "condition": ""
+            "target": "ECASTLE"
           },
           {
             "verb": "NORTH",
-            "target": "FORE3",
-            "condition": ""
+            "target": "FORE3"
           },
           {
             "verb": "SOUTH",
-            "target": "FORE2",
-            "condition": ""
+            "target": "FORE2"
           }
-        ],
-        "inventory": []
+        ]
       },
       "FORE1": {
         "name": "Forest West of Castle",
@@ -229,105 +192,141 @@
         "exits": [
           {
             "verb": "NORTH",
-            "target": "FORE3",
-            "condition": ""
+            "target": "FORE3"
           },
           {
             "verb": "WEST",
-            "target": "RIVER",
-            "condition": ""
+            "target": "RIVER"
           },
           {
             "verb": "SOUTH",
-            "target": "FORE2",
-            "condition": ""
+            "target": "FORE2"
           },
           {
             "verb": "EAST",
-            "target": "WCASTLE",
-            "condition": ""
-          },
-          {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
+            "target": "WCASTLE"
           }
-        ],
-        "inventory": []
+        ]
       },
       "FORE2": {
         "name": "Forest South of Castle",
         "desc": "This is a dimly lit forest, with large leafy trees surrounding you.  To the\r\nwest, there appears to be a footpath and sunlight.",
         "exits": [
           {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
-          },
-          {
             "verb": "NORTH",
-            "target": "SCASTLE",
-            "condition": ""
+            "target": "SCASTLE"
           },
           {
             "verb": "EAST",
-            "target": "RAVINE",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "NoExit",
-            "condition": ""
+            "target": "RAVINE"
           },
           {
             "verb": "WEST",
-            "target": "FORE1",
-            "condition": ""
-          },
-          {
-            "verb": "INVESTIGATE",
-            "target": "sword",
-            "condition": ""
+            "target": "FORE1"
           }
-        ],
-        "inventory": []
+        ]
       },
       "RIVER": {
         "name": "Riverbank",
-        "desc": "This is a wide but calm river. You might be able to cross it, but the bushes on the other side are too thick. You would need a sword to cut through them. To the north of the river you see a footpath. To your south, there's a steep wall of a mountain. You can't go this way.",
+        "desc": "This is a wide but calm river. The bushes on the other side are quite thick. Maybe if you use your sword you can get through. To the north, along the river you see a footpath. South of you is a steep wall of slate. It looks to be the rocky beginning of a mountain. You can't go this way.",
         "exits": [
           {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
+            "verb": "CROSS",
+            "target": "ACROSS"
+          },
+          {
+            "verb": "WEST",
+            "target": "ACROSS"
           },
           {
             "verb": "NORTH",
-            "target": "ELF",
-            "condition": ""
+            "target": "ELF"
           },
           {
             "verb": "EAST",
-            "target": "FORE1",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "NoExit",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "NoExit",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "CROSSRIVER",
-            "condition": "sword"
+            "target": "FORE1"
           }
-        ],
-        "inventory": []
+        ]
+      },
+      "ACROSS": {
+        "name": "Across the river",
+        "desc": "You wade across the river and the water level comes up to your knees. It's chilly, and you think you might've caught a fish in your boot. You begin to wack at the bushes with your new sword. You discover it feels quite natural and thankfully the amenesia hasn't affected your skills. You slice through the bushes easily and stumble across a shady path. Tall trees and their fallen leaves line the path. Sunlight flirts with the canopy leaves. It's beautiful and peaceful. Suddenly you hear shouts coming from back across the river.",
+        "exits": [
+           {
+             "verb": "BACK",
+             "target": "RIVER"
+           },
+           {
+              "verb": "CONTINUE",
+              "target": "PATH"
+           }
+        ]
+      },
+      "PATH": {
+        "name": "Down the Path",
+        "desc": "You decide to ignore the shouts for now; it took a lot of effort to get here so might as well explore while you can. You follow the path for awhile and the seen barely changs. One thing stands out to you however, you've noticed some rather large footprints...",
+        "exits": [
+          {
+            "verbs":"BACK",
+            "target": "ACROSS"
+          },
+          {
+            "verbs": "CONTINUE",
+            "target": "ARCH"
+          }
+        ]
+      },
+      "ARCH": {
+        "name": "Stone arch",
+        "desc": "The path ends in a massive stone arch and suddenly ruins begin to sprout from the trees and bushes nearby. Cautiously, you approach the arch when suddenly you detect voices. Loud and deep voices.",
+        "exits": [
+          {
+            "verbs": "BACK",
+            "target": "PATH"
+          },
+          {
+            "verbs": "CONTINUE",
+            "target": "TROLL"
+          }
+        ]
+      },
+      "TROLL": {
+        "name": "You've stumbled upon a troll camp",
+        "desc": "The voices seem too be getting louder and you duck behind a nearby pillar and listen to their conversation. Just as you're ducking behind the pillar, you catch a glimpse of two trolls.\n\nTroll one: 'I'm ravenous! I haven't had fresh elf in AGES. Sure we have our fair share of humans after that battle they just had with each other-'\nTroll two:'Ha ha! Stupid humans!'\nTroll one:'Groff what did I tell you about interupting me?'\nGroff:'Sorry Bulborus...'\nBulborus:'As I was saying, I haven't had elf in decades. Those sneaky tree huggers are too good at hiding. It isn't fair that they're the tastiest. Especially when humans are so dry and tough and wait - what's that smell?'\n\nYou freeze. They're really close now. All that's separating you is the pillar you're hidden behind and a few robust bushes.\n\nGroff: 'Wait I smell it too. I know that smell! That's human!'\n\nYou start to sweat profusely and think up some swears that your mother would've kicked you out of the house for. You desperately scan your surroundings, looking for an escape route or some form of a plan. All you see is a few decent sized rocks near the base of the pillar that you might be able to use as a distraction while you sneak away through the woods, or you could just hit them with the rocks and make a break for it...\n\n(Try 'Distract' or 'Throw')",
+        "exits": [
+          {
+            "verbs": "DISTRACT",
+            "target": "SUCCESS"
+          },
+          {
+            "verbs": "THROW",
+            "target": "FAIL"
+          }
+        ]
+      },
+      "SUCCESS": {
+        "name": "Success!",
+        "desc": "Thankfully, trolls are quite stupid, so when you threw the rock far away from you, they chased fake you shouting about how they were going to eat you. Lucky for you, your craftiness saved your skin, and you were able to escape through the forest back to the very start of the path.\n\nTo return to the river before you crossed, enter: 'return'. Otherwise, 'back' will guide you all the way back.",
+        "exits": [
+          {
+            "verbs": "BACK",
+            "target": "PATH"
+          },
+          {
+            "verbs": "RETURN",
+            "targer": "RIVER"
+          }
+        ]
+      },
+      "FAIL": {
+        "name": "BAD IDEA!",
+        "desc": "Trolls are known for two things: being incredibly stupid (which would've been very useful if you had throw the rock as a distraction) and having HORRIBLE tempers. Your rock throws confused them at first, but then they got REALLY angry and well... you perished. Sorry 'bout that. Try again next time?",
+        "exits": [
+          {
+            "verbs": "",
+            "target": "END"
+          }
+        ]
       },
       "FORE3": {
         "name": "Forest North of Castle",
@@ -335,80 +334,57 @@
         "exits": [
           {
             "verb": "UP",
-            "target": "TREE",
-            "condition": ""
+            "target": "TREE"
           },
           {
             "verb": "NORTH",
-            "target": "FORE4",
-            "condition": ""
+            "target": "FORE4"
           },
           {
             "verb": "EAST",
-            "target": "RAVINE",
-            "condition": ""
+            "target": "RAVINE"
           },
           {
             "verb": "SOUTH",
-            "target": "NCASTLE",
-            "condition": ""
+            "target": "NCASTLE"
           },
           {
             "verb": "WEST",
-            "target": "FORE1",
-            "condition": ""
+            "target": "FORE1"
           }
-        ],
-        "inventory": []
+        ]
       },
       "TREE": {
         "name": "Up a Tree",
-        "desc": "You've climbed the tree and breached the canopy to see smoke coming from a chimney off to the West.",
+        "desc": "You've climbed the tree and breached the canopy to see smoke coming from a chimney off to the West somewhere.",
         "exits": [
           {
             "verb": "DOWN",
-            "target": "FORE3",
-            "condition": ""
-          },
-          {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
+            "target": "FORE3"
           }
-        ],
-        "inventory": []
+        ]
       },
       "FORE4": {
         "name": "Forest far north of Castle",
         "desc": "This is a large forest, with trees obstructing all views except\r\nto the west, where a small clearing and a cottage can be seen through the trees.",
         "exits": [
           {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "NoExit",
-            "condition": ""
-          },
-          {
             "verb": "NORTH",
-            "target": "FORE5",
-            "condition": ""
+            "target": "TOWER"
           },
           {
             "verb": "SOUTH",
-            "target": "FORE3",
-            "condition": ""
+            "target": "FORE3"
           },
           {
             "verb": "WEST",
-            "target": "COTTAGE",
-            "condition": ""
+            "target": "COTTAGE"
+          },
+          {
+            "verbs": "NW",
+            "target": "FORE5"
           }
-        ],
-        "inventory": []
+        ]
       },
       "COTTAGE": {
         "name": "Small cottage",
@@ -416,31 +392,25 @@
         "exits": [
           {
             "verb": "ENTER",
-            "target": "LROOM",
-            "condition": ""
+            "target": "LROOM"
           },
           {
             "verb": "SOUTH",
-            "target": "ELF",
-            "condition": ""
+            "target": "ELF"
           },
           {
-            "verb": "NE",
-            "target": "FORE5",
-            "condition": ""
+            "verb": "NORTH",
+            "target": "FORE5"
           },
           {
             "verb": "EAST",
-            "target": "FORE4",
-            "condition": ""
+            "target": "FORE4"
           },
           {
             "verb": "WEST",
-            "target": "Not an option. Try again.",
-            "condition": ""
+            "target": "Not an option. Try something else."
           }
-        ],
-        "inventory": []
+        ]
       },
       "LROOM": {
         "name": "in the living room of a small cottage",
@@ -448,41 +418,34 @@
         "exits": [
           {
             "verb": "RIGHT",
-            "target": "KITCH",
-            "condition": ""
+            "target": "KITCH"
           },
           {
             "verb": "EXIT",
-            "target": "COTTAGE",
-            "condition": ""
+            "target": "COTTAGE"
           },
           {
             "verb": "CONTINUE",
-            "target": "BEDROOM",
-            "condition": ""
+            "target": "BEDROOM"
           }
-        ],
-        "inventory": []
+        ]
       },
       "BEDROOM": {
-        "name": "in the bedroom of a small cottage",
+        "name": "Cottage bedroom",
         "desc": "This room is just as dull as the last. There's only a bed, a wardrobe and a hooded cloak haphazardly thrown over a nearby chair. You grab it just for funsies.",
         "exits": [
           {
             "verb": "RETURN",
-            "target": "LROOM",
-            "condition": ""
+            "target": "LROOM"
           },
           {
             "verb": "BACK",
-            "target": "LROOM",
-            "condition": ""
+            "target": "LROOM"
           }
-        ],
-        "inventory": ["cloak"]
+        ]
       },
       "KITCH": {
-        "name": "in the kitchen of a small cottage",
+        "name": "Cottage kitchen",
         "desc": "There's a coal stove in the corner with a few burning embers. It seems as though it hasn't been used in several hours. There's also a counter, a small makeshift tin sink, and a tiny window facing east towards... a tower?",
         "exits": [
           {
@@ -490,32 +453,27 @@
             "target": "LROOM",
             "condition": ""
           }
-        ],
-        "inventory": []
+        ]
       },
       "FORE5": {
         "name": "in forest North West of the abandoned castle",
-        "desc": "This is more forest, with trees surrounding you from all directions. There is a particularly tall tree with many thick branches gradually circling the trunk in an upwards spiral.",
+        "desc": "This is more forest, with trees surrounding you from all directions. There is a particularly tall tree with many thick branches gradually circling the trunk in an upwards spiral. It looks climbable.",
         "exits": [
           {
             "verb": "UP",
-            "target": "TREE2",
-            "condition": ""
+            "target": "TREE2"
           },
           {
-            "verb": "NE",
-            "target": "TOWER",
-            "condition": ""
+            "verb": "EAST",
+            "target": "TOWER"
           },
           {
-            "verb": "SE",
-            "target": "FORE4",
-            "condition": ""
+            "verb": "SOUTH",
+            "target": "COTTAGE"
           },
           {
-            "verb": "SW",
-            "target": "COTTAGE",
-            "condition": ""
+            "verbs": "SE",
+            "target": "FORE4"
           }
         ],
         "inventory": []
@@ -526,56 +484,173 @@
         "exits": [
           {
             "verb": "DOWN",
-            "target": "FORE5",
-            "condition": ""
-          },
-          {
-            "verb": "UP",
-            "target": "NoExit",
-            "condition": ""
+            "target": "FORE5"
           }
-        ],
-        "inventory": []
+        ]
       },
       "ELF": {
         "name": "near a kidnapped elf",
-        "desc": "You're following the stream when you hear distant shouts. You approach cautiously to discover an elf tied to a tree with rope. Near the elf are two trolls who are debating the best way to cook elf. They're boiling a cauldron of water and their backs are turned away from the miserable elf.",
+        "desc": "You're following the stream when you hear distant shouts. You approach cautiously to discover an elf tied to a tree with rope. Near the elf are two trolls who are debating the best way to cook elf. They're boiling a cauldron of water and their backs are turned away from the miserable elf who you can barely see from your position between some bushes with the most beautiful flowers you've ever seen.",
         "exits": [
           {
-            "verb": "WAVE",
-            "target": "ATTENTION",
-            "condition": ""
+            "verb": "HELP",
+            "target": "ATTENTION"
           },
           {
             "verb": "NORTH",
-            "target": "COTTAGE",
-            "condition": ""
+            "target": "COTTAGE"
           },
           {
             "verb": "SOUTH",
-            "target": "RIVER",
-            "condition": ""
+            "target": "RIVER"
           }
-        ],
-        "inventory": []
+        ]
       },
-      "THRONE": {
-        "name": "Throne Room",
-        "desc": "Welcome to the boss battle!!! ",
+      "ATTENTION": {
+        "name": "The elf sees you waving",
+        "desc": "They turn around and you realize the elf is a little girl. She looks barley above the age of 8. She's dressed in an elegant light blue dress. Her hair is dark brown and chin length, and she wears a flower crown made of clematis or 'bee's jubilee. She's tiny and her cheeks are bright red and damp with tears. When she sees you waving, her eyes light up. It seems as if she has an idea.\n\n'LET ME GO!' She shouts and strains against the ropes that bind her to the tree. Startled, you feel the urge to run, but she holds eye contact with you, so you wait. The trolls shout dismissals and don't even turn around. You take this as a cue that they won't notice you approaching, but if they did catch you then you both would be dead. You could try to fight them... (verb options: CUT ROPE, FIGHT)",
         "exits": [
           {
-            "verb": "",
-            "target": "",
-            "condition": ""
+            "verbs": "CUT ROPE",
+            "target": "FREEELF"
+          },
+          {
+            "verbs": "FIGHT",
+            "target": "END"
           }
-        ],
-        "inventory": []
+        ]
+      },
+      "FREEELF": {
+        "name": "You approach the elf girl",
+        "desc": "The trolls don't notice you (they aren't naturally attentive creatures) and you cut through one of the rope loops with your sword. You untangle the rest and sling it over your shoulder just in case. You both escape successfully, but you need to hide somewhere or they might notice and catch you.",
+        "exits": [
+          {"verbs": "NORTH",
+          "target": "COTTAGE"
+          },
+          {
+            "verbs": "SOUTH",
+            "target": "RIVER"
+          },
+          {
+            "verbs": "EAST",
+            "target": "FORE4"
+          }
+        ]
+      },
+      "TOWER": {
+        "name": "Tall brick tower",
+        "desc": "You've come across a tall brick tower. If you have freed the elf, then you can climb this tower. If not, you need to free the elf.",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "PRINCESS"
+          },
+          {
+            "verb": "CLIMB",
+            "target": "PRINCESS"
+          },
+          {
+            "verb": "SOUTH",
+            "target": "FORE4"
+          },
+          {
+            "verb": "WEST",
+            "target": "FORE5"
+          }
+        ]
+      },
+      "PRINCESS": {
+        "name": "Top of the Tower",
+        "desc": "You and your elf companion climb to the top of the brick tower using the ropes that the trolls had used to keep her hostage. When you reach the top, you are immediately assaulted by a young lady with very short hair and the angriest expression you've ever seen.\n\n'Who are you?! Are you my kidnappers?! Finally decided to show your sorry faces huh?! I'll whoop your ass if you try to touch me again! My father has drained me since birth! I will throw you from this tower I swear it!' She shouts as she holds a knife against your throat. Her eyes keep shifting to your elf friend who's name you still don't know.\nYour elf companion turns to you and raises an eyebrow. You start to speak but the woman's grip gets stronger.\n'We aren't kidnappers.' You weaze.'We're hiding from trolls! I swear!' Your elf friend nods eagerly along. The woman doesn't let up her grip, but stares between the two of you considering your words. While she's thinking you get a good look at her and realize she looks familiar. Based on what she's told you, you assume she muust be someone from the castle at the least; if your luck holds, then she's the princess.\n'Um, miss?,' your elf friend pipes up. 'Could you let him go, please?' The woman lets you go cautiously without saying a word and takes several steps back. You sink to the floor in relief. You have two options, leave the tower and give up on this quest, move to a nice kingdom with less trolls probably, live out your days in the sun.. or you can try to convince the princess to take back her kingdom.",
+        "exits": [
+          {
+            "verbs": "CONVINCE",
+            "target": "WAITING"
+          },
+          {
+            "verbs": "GIVE UP",
+            "target": "LAME"
+          }
+        ]
+      },
+      "WAITING": {
+        "name": "Convince the princess",
+        "desc": "You: 'I promise you princess, we are not here to hurt you. I was sent by Sir Gerald to come find you so you can do some juju and save the kingdom. I promise that is my only intent. I don't have a great memory of the event, but aparently your uncle poisoned your father, and I'm not sure what that's about, but clearly the poisoner can't be the good guy here. So... what do ya say? Will you help us regain the kingdom?\n\nThe princess looks at you like you're crazy and says 'I don't have any juju or whatever, but we do have a family loop hole we might be able to use to regain the kingdom. It's unpredictable and very risky, so unless you've got something more appealing than revenge in mind, I'm definitely out.'",
+        "exits": [
+          {
+            "verbs": "CONVINCE",
+            "target": "LEAVE"
+          },
+          {
+            "verbs": "GIVE UP",
+            "target": "LAME"
+          }
+        ]
+      },
+      "LAME": {
+        "name": "You chose to give up",
+        "desc": "You're not a very honorable knight you know, but I get it. Good luck finding a non-troll infested kingdom! (Type Quit to end game)",
+        "exits": [
+          {
+            "verbs": "QUIT",
+            "target": "END"
+          }
+        ]
+      },
+      "LEAVE": {
+        "name": "Almost there...",
+        "desc": "You look the princess in the eyes and say, 'You really want to spend the rest of your miserable life in this tower? Who even feeds you? You might as well TRY and get your kingdom back. As it is, I have amnesia fighting for this stupid kingdom. Do something!'\nThe princess looks perturbed but sighs and agrees to 'at least try'. You aren't too thrilled about the idea of her ruling if she cares this little, but you're kinda tired of this quest at this point and you'd rather not encounter any more trolls. A nice cushy palace life should fix that one.\n\n The princess informs you that she knows of a secret tunnel that leads into the castle's kitchen. You decide to follow her.",
+        "exits": [
+          {
+            "verbs": "FOLLOW",
+            "target": "SECRETTUNNEL"
+          }
+        ]
+      },
+      "SECRETTUNNEL": {
+
+      },
+      "CKITCH": {},
+      "THRONE": {
+        "name": "Throne Room",
+        "desc": "Welcome to the boss battle!!! In the north corner we have your villain! It's none other than the princess's uncle! Awkard.\nIn the other corner we have the princess herself and boy does she look angry!\nHow do you win you wonder? It's easy! Rock, paper, scissors! There's been enough battle lately and who wants to kill their family - even if they did already murder your father, the king, their brother... hamlet anyone? Anywho! Loser gets prison for life! On the count of 3!\nEvil uncle: 'On three or after three?'\nOn three Thomas! :/ duh.\nThomas: 'If I win, you die first.'\n...\nOne... Two... Three...",
+        "exits": [
+          {
+            "verb": "ROCK",
+            "target": "WIN",
+            "condition": "response = win"
+          },
+          {
+            "verb": "PAPER",
+            "target": "WIN",
+            "condition": "response = win"
+          },
+          {
+            "verb": "SCISSORS",
+            "target": "WIN",
+            "condition": "response = win"
+          },
+          {
+          "verb": "ROCK",
+          "target": "LOSE",
+          "condition": "response = win"
+          },
+          {
+          "verb": "PAPER",
+          "target": "LOSE",
+          "condition": "response = win"
+          },
+          {
+          "verb": "SCISSORS",
+          "target": "LOSE",
+          "condition": "response = win"
+          }
+        ]
       },
       "END": {
         "name": "END",
         "desc": "Whoops you perished.",
-        "exits": [],
-        "inventory": []
+        "exits": []
       }
     }
 }

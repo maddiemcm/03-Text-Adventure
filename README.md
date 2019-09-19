@@ -58,4 +58,6 @@ HINTS
 5. sike its actually the wall
 6. "You should see me in a crown" (love Billie Eilish)
 
+*** Avoid attacking the trolls ***
+
 Alrighty that's everything! Have fun playing!
