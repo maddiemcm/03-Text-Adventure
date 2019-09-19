@@ -37,10 +37,12 @@
       { "v": "THROW",   "map": "THROW"  },
       { "v": "DISTRACT", "map": "DISTRACT"},
       { "v": "HELP",   "map": "HELP"},
-      {"v": "CUT ROPE", "map": "CUT ROPE" },
+      {"v": "CUTROPE", "map": "CUTROPE" },
       {"v": "CONVINCE", "map": "COONVINCE" },
       {"v": "GIVE UP", "map": "GIVE UP" },
-      {"v": "FOLLOW", "map": "FOLLOW" }
+      {"v": "FOLLOW", "map": "FOLLOW" },
+      {"v": "WAVE", "map": "WAVE" },
+      {"v": "INVESTIGATE", "map": "INVESTIGATE" }
      ],
     "rooms": {
       "START": {
@@ -59,7 +61,7 @@
       },
       "STAND": {
         "name": "Introduction continued",
-        "desc": "You take his hand, stand up, and take in your surroundings. \n\nFirst you notice the scattered, beaten and bloodied bodies lying in the fields around you.  You cringe and feel even more confused as you still can't recall a thing.  Then your eyes wander to a tall, stone castle to your North which looks like its seen better days.  The drawbridge is up, and the place doesn't seem at all inviting.  Despite the scene before you, the environment feels remarkably calm, and the birds sing as if nothing has happened.  You turn towards Sir Gerald only to realize he is significantly shorter than you first observed. You perceive him to be a dwarf and ask him what happened here. \n\nSir Gerald: 'Ain't it obvious?  There was a battle this morning - started late last night when the king was murdered.  According to the whispers, the kind was poisoned by his greedy no good brother.  Good thing I hid when I heard the shouts.  See, I'm only the royal treasurer; I don't have any battle experiience.  It's a shame though. He was a decent king.  Not too many of those as of late, someone's always hungerin' for power nowadays.  Too many arrogant, greedy kings...' the dwarf rambled. \n\nYou: 'So what am I supposed to do exactly? I don't even remember what happened.'\n\nSir Gerald: 'Well yer the last living knight of the former king, so I figure ya gotta find and rescue the princess.'\n\nYou: 'How will that help things?'\n\nSir Gerald: 'It might not, but the whispers say she's got some magical powers or somethin'.  Maybe she can restore peace?' He shrugs and starts to turn away. 'Well best of luck to ye.  Oh! Take this with ye on yer quest!' He hands you a lightweight, sharp steel sword that seemingly came from nowhere. It's so shiny that it seems as if it's never left the armory.  Although a bit shorter than you would have preferred, it'll serve you well, nevertheless.\n\nSir Gerald: 'Hopefully it'll be of some use to you - more than it's been to me at least. Farewell!'\n\nThe dwarf heads off into the woods to your South, away from the castle.",
+        "desc": "You take his hand, stand up, and take in your surroundings. \n\nFirst you notice the scattered, beaten and bloodied bodies lying in the fields around you.  You cringe and feel even more confused as you still can't recall a thing.  Then your eyes wander to a tall, stone castle to your North which looks like its seen better days.  The drawbridge is up, and the place doesn't seem at all inviting.  Despite the scene before you, the environment feels remarkably calm, and the birds sing as if nothing has happened.  You turn towards Sir Gerald only to realize he is significantly shorter than you first observed. You perceive him to be a dwarf and ask him what happened here. \n\nSir Gerald: 'Ain't it obvious?  There was a battle this morning - started late last night when the king was murdered.  According to the whispers, the kind was poisoned by his greedy no good brother.  Good thing I hid when I heard the shouts.  See, I'm only the royal treasurer; I don't have any battle experiience.  It's a shame though. He was a decent king.  Not too many of those as of late, someone's always hungerin' for power nowadays.  Too many arrogant, greedy kings...' the dwarf rambled. \n\nYou: 'So what am I supposed to do exactly? I don't even remember what happened.'\n\nSir Gerald: 'Well yer the last living knight of the former king, so I figure ya gotta find and rescue the princess.'\n\nYou: 'How will that help things?'\n\nSir Gerald: 'It might not, but the whispers say she's got some magical powers or somethin'.  Maybe she can restore peace?' He shrugs and starts to turn away. 'Well best of luck to ye.  Oh! Take this with ye on yer quest!' He hands you a lightweight, sharp steel sword that seemingly came from nowhere. It's so shiny that it seems as if it's never left the armory.  Although a bit shorter than you would have preferred, it'll serve you well, nevertheless.\n\nSir Gerald: 'Hopefully it'll be of some use to you - more than it's been to me at least. Farewell!'\n\nThe dwarf heads off into the woods to your South, away from the castle.\n\n(Try: 'NORTH' or 'SOUTH'",
         "exits": [
           {
             "verb": "NORTH",
@@ -266,11 +268,11 @@
         "desc": "You decide to ignore the shouts for now; it took a lot of effort to get here so might as well explore while you can. You follow the path for awhile and the seen barely changs. One thing stands out to you however, you've noticed some rather large footprints...",
         "exits": [
           {
-            "verbs":"BACK",
+            "verb":"BACK",
             "target": "ACROSS"
           },
           {
-            "verbs": "CONTINUE",
+            "verb": "CONTINUE",
             "target": "ARCH"
           }
         ]
@@ -280,11 +282,11 @@
         "desc": "The path ends in a massive stone arch and suddenly ruins begin to sprout from the trees and bushes nearby. Cautiously, you approach the arch when suddenly you detect voices. Loud and deep voices.",
         "exits": [
           {
-            "verbs": "BACK",
+            "verb": "BACK",
             "target": "PATH"
           },
           {
-            "verbs": "CONTINUE",
+            "verb": "CONTINUE",
             "target": "TROLL"
           }
         ]
@@ -294,11 +296,11 @@
         "desc": "The voices seem too be getting louder and you duck behind a nearby pillar and listen to their conversation. Just as you're ducking behind the pillar, you catch a glimpse of two trolls.\n\nTroll one: 'I'm ravenous! I haven't had fresh elf in AGES. Sure we have our fair share of humans after that battle they just had with each other-'\nTroll two:'Ha ha! Stupid humans!'\nTroll one:'Groff what did I tell you about interupting me?'\nGroff:'Sorry Bulborus...'\nBulborus:'As I was saying, I haven't had elf in decades. Those sneaky tree huggers are too good at hiding. It isn't fair that they're the tastiest. Especially when humans are so dry and tough and wait - what's that smell?'\n\nYou freeze. They're really close now. All that's separating you is the pillar you're hidden behind and a few robust bushes.\n\nGroff: 'Wait I smell it too. I know that smell! That's human!'\n\nYou start to sweat profusely and think up some swears that your mother would've kicked you out of the house for. You desperately scan your surroundings, looking for an escape route or some form of a plan. All you see is a few decent sized rocks near the base of the pillar that you might be able to use as a distraction while you sneak away through the woods, or you could just hit them with the rocks and make a break for it...\n\n(Try 'Distract' or 'Throw')",
         "exits": [
           {
-            "verbs": "DISTRACT",
+            "verb": "DISTRACT",
             "target": "SUCCESS"
           },
           {
-            "verbs": "THROW",
+            "verb": "THROW",
             "target": "FAIL"
           }
         ]
@@ -308,21 +310,21 @@
         "desc": "Thankfully, trolls are quite stupid, so when you threw the rock far away from you, they chased fake you shouting about how they were going to eat you. Lucky for you, your craftiness saved your skin, and you were able to escape through the forest back to the very start of the path.\n\nTo return to the river before you crossed, enter: 'return'. Otherwise, 'back' will guide you all the way back.",
         "exits": [
           {
-            "verbs": "BACK",
+            "verb": "BACK",
             "target": "PATH"
           },
           {
-            "verbs": "RETURN",
+            "verb": "RETURN",
             "targer": "RIVER"
           }
         ]
       },
       "FAIL": {
         "name": "BAD IDEA!",
-        "desc": "Trolls are known for two things: being incredibly stupid (which would've been very useful if you had throw the rock as a distraction) and having HORRIBLE tempers. Your rock throws confused them at first, but then they got REALLY angry and well... you perished. Sorry 'bout that. Try again next time?",
+        "desc": "Trolls are known for two things: being incredibly stupid (which would've been very useful if you had throw the rock as a distraction) and having HORRIBLE tempers. Your rock throws confused them at first, but then they got REALLY angry and well... you perished. Sorry 'bout that. Try again next time? (Try 'Quit')",
         "exits": [
           {
-            "verbs": "",
+            "verb": "QUIT",
             "target": "END"
           }
         ]
@@ -440,6 +442,14 @@
           {
             "verb": "BACK",
             "target": "LROOM"
+          },
+          {
+            "verb": "LEAVE",
+            "target": "LROOM"
+          },
+          {
+            "verb": "EXIT",
+            "target": "LROOM"
           }
         ]
       },
@@ -449,13 +459,24 @@
         "exits": [
           {
             "verb": "RETURN",
-            "target": "LROOM",
-            "condition": ""
+            "target": "LROOM"
+          },
+          {
+            "verb": "BACK",
+            "target": "LROOM"
+          },
+          {
+            "verb": "EXIT",
+            "target": "LROOM"
+          },
+          {
+            "verb": "LEAVE",
+            "target": "LROOM"
           }
         ]
       },
       "FORE5": {
-        "name": "in forest North West of the abandoned castle",
+        "name": "Forest far north of the castle",
         "desc": "This is more forest, with trees surrounding you from all directions. There is a particularly tall tree with many thick branches gradually circling the trunk in an upwards spiral. It looks climbable.",
         "exits": [
           {
@@ -496,6 +517,14 @@
             "target": "ATTENTION"
           },
           {
+            "verb": "WAVE",
+            "target": "ATTENTION"
+          },
+          {
+            "verb": "INVESTIGATE",
+            "target": "ATTENTION"
+          },
+          {
             "verb": "NORTH",
             "target": "COTTAGE"
           },
@@ -507,31 +536,31 @@
       },
       "ATTENTION": {
         "name": "The elf sees you waving",
-        "desc": "They turn around and you realize the elf is a little girl. She looks barley above the age of 8. She's dressed in an elegant light blue dress. Her hair is dark brown and chin length, and she wears a flower crown made of clematis or 'bee's jubilee. She's tiny and her cheeks are bright red and damp with tears. When she sees you waving, her eyes light up. It seems as if she has an idea.\n\n'LET ME GO!' She shouts and strains against the ropes that bind her to the tree. Startled, you feel the urge to run, but she holds eye contact with you, so you wait. The trolls shout dismissals and don't even turn around. You take this as a cue that they won't notice you approaching, but if they did catch you then you both would be dead. You could try to fight them... (verb options: CUT ROPE, FIGHT)",
+        "desc": "They turn around and you realize the elf is a little girl. She looks barley above the age of 8. She's dressed in an elegant light blue dress. Her hair is dark brown and chin length, and she wears a flower crown made of clematis or 'bee's jubilee. She's tiny and her cheeks are bright red and damp with tears. When she sees you waving, her eyes light up. It seems as if she has an idea.\n\n'LET ME GO!' She shouts and strains against the ropes that bind her to the tree. Startled, you feel the urge to run, but she holds eye contact with you, so you wait. The trolls shout dismissals and don't even turn around. You take this as a cue that they won't notice you approaching, but if they did catch you then you both would be dead. You could try to fight them... (verb options: CUTROPE, FIGHT)",
         "exits": [
           {
-            "verbs": "CUT ROPE",
+            "verb": "CUTROPE",
             "target": "FREEELF"
           },
           {
-            "verbs": "FIGHT",
+            "verb": "FIGHT",
             "target": "END"
           }
         ]
       },
       "FREEELF": {
         "name": "You approach the elf girl",
-        "desc": "The trolls don't notice you (they aren't naturally attentive creatures) and you cut through one of the rope loops with your sword. You untangle the rest and sling it over your shoulder just in case. You both escape successfully, but you need to hide somewhere or they might notice and catch you.",
+        "desc": "The trolls don't notice you (they aren't naturally attentive creatures) and you cut through one of the rope loops with your sword. You untangle the rest and sling it over your shoulder just in case. You both escape successfully, but you need to leave soon or they might come after you.",
         "exits": [
-          {"verbs": "NORTH",
+          {"verb": "NORTH",
           "target": "COTTAGE"
           },
           {
-            "verbs": "SOUTH",
+            "verb": "SOUTH",
             "target": "RIVER"
           },
           {
-            "verbs": "EAST",
+            "verb": "EAST",
             "target": "FORE4"
           }
         ]
@@ -563,11 +592,11 @@
         "desc": "You and your elf companion climb to the top of the brick tower using the ropes that the trolls had used to keep her hostage. When you reach the top, you are immediately assaulted by a young lady with very short hair and the angriest expression you've ever seen.\n\n'Who are you?! Are you my kidnappers?! Finally decided to show your sorry faces huh?! I'll whoop your ass if you try to touch me again! My father has drained me since birth! I will throw you from this tower I swear it!' She shouts as she holds a knife against your throat. Her eyes keep shifting to your elf friend who's name you still don't know.\nYour elf companion turns to you and raises an eyebrow. You start to speak but the woman's grip gets stronger.\n'We aren't kidnappers.' You weaze.'We're hiding from trolls! I swear!' Your elf friend nods eagerly along. The woman doesn't let up her grip, but stares between the two of you considering your words. While she's thinking you get a good look at her and realize she looks familiar. Based on what she's told you, you assume she muust be someone from the castle at the least; if your luck holds, then she's the princess.\n'Um, miss?,' your elf friend pipes up. 'Could you let him go, please?' The woman lets you go cautiously without saying a word and takes several steps back. You sink to the floor in relief. You have two options, leave the tower and give up on this quest, move to a nice kingdom with less trolls probably, live out your days in the sun.. or you can try to convince the princess to take back her kingdom.",
         "exits": [
           {
-            "verbs": "CONVINCE",
+            "verb": "CONVINCE",
             "target": "WAITING"
           },
           {
-            "verbs": "GIVE UP",
+            "verb": "GIVE UP",
             "target": "LAME"
           }
         ]
@@ -577,11 +606,11 @@
         "desc": "You: 'I promise you princess, we are not here to hurt you. I was sent by Sir Gerald to come find you so you can do some juju and save the kingdom. I promise that is my only intent. I don't have a great memory of the event, but aparently your uncle poisoned your father, and I'm not sure what that's about, but clearly the poisoner can't be the good guy here. So... what do ya say? Will you help us regain the kingdom?\n\nThe princess looks at you like you're crazy and says 'I don't have any juju or whatever, but we do have a family loop hole we might be able to use to regain the kingdom. It's unpredictable and very risky, so unless you've got something more appealing than revenge in mind, I'm definitely out.'",
         "exits": [
           {
-            "verbs": "CONVINCE",
+            "verb": "CONVINCE",
             "target": "LEAVE"
           },
           {
-            "verbs": "GIVE UP",
+            "verb": "GIVE UP",
             "target": "LAME"
           }
         ]
@@ -591,7 +620,7 @@
         "desc": "You're not a very honorable knight you know, but I get it. Good luck finding a non-troll infested kingdom! (Type Quit to end game)",
         "exits": [
           {
-            "verbs": "QUIT",
+            "verb": "QUIT",
             "target": "END"
           }
         ]
@@ -601,7 +630,7 @@
         "desc": "You look the princess in the eyes and say, 'You really want to spend the rest of your miserable life in this tower? Who even feeds you? You might as well TRY and get your kingdom back. As it is, I have amnesia fighting for this stupid kingdom. Do something!'\nThe princess looks perturbed but sighs and agrees to 'at least try'. You aren't too thrilled about the idea of her ruling if she cares this little, but you're kinda tired of this quest at this point and you'd rather not encounter any more trolls. A nice cushy palace life should fix that one.\n\n The princess informs you that she knows of a secret tunnel that leads into the castle's kitchen. You decide to follow her.",
         "exits": [
           {
-            "verbs": "FOLLOW",
+            "verb": "FOLLOW",
             "target": "SECRETTUNNEL"
           }
         ]

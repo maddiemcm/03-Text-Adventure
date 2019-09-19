@@ -29,7 +29,7 @@ def checkInput():
 
 def update(response, game, current):
     '''Update our location, if possible, etc. '''
-    s = list(response)[0] #assumes verb is the first thing typed
+    s = list(response)[0]
     if s == "":
         print("\nSorry, I don't understand. Try another command.")
     elif s == 'verbs':
@@ -44,7 +44,13 @@ def update(response, game, current):
     return current
 
 
-
+def end_game(winning,moves):
+    if winning:
+        print('\n\nYou have won! Congratulations')
+        print('\nYou made {moves} moves! Nicely done!'.format(moves=moves))
+    else:
+        print('\n\nThanks for playing!')
+        print('\nYou made {moves} moves. See you next time!'.format(moves=moves))
         
         
 
@@ -59,13 +65,24 @@ def main():
     quit = False
     moves = 0
     while not quit:
-        #render
+        
         render(game, current, moves)
-        #check player input
+        
         response = checkInput()
-        #update
+        if response[0] == 'QUIT':
+            end_game(False,moves)
+            break
+
         current = update(response, game, current)
         moves = moves+1
+        
+        if current in 'WIN':
+            end_game(True, moves)
+            break
+        if current in 'LOSE':
+            end_game(False, moves)
+            break
+    
     return True
 
 
