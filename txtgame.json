@@ -492,7 +492,7 @@
             "target": "COTTAGE"
           },
           {
-            "verbs": "SE",
+            "verb": "SE",
             "target": "FORE4"
           }
         ]
