@@ -37,12 +37,12 @@
       { "v": "THROW",   "map": "THROW"  },
       { "v": "DISTRACT", "map": "DISTRACT"},
       { "v": "HELP",   "map": "HELP"},
-      {"v": "CUTROPE", "map": "CUTROPE" },
-      {"v": "CONVINCE", "map": "COONVINCE" },
-      {"v": "GIVE UP", "map": "GIVE UP" },
-      {"v": "FOLLOW", "map": "FOLLOW" },
-      {"v": "WAVE", "map": "WAVE" },
-      {"v": "INVESTIGATE", "map": "INVESTIGATE" }
+      { "v": "CUTROPE", "map": "CUTROPE" },
+      { "v": "CONVINCE", "map": "COONVINCE" },
+      { "v": "GIVE UP", "map": "GIVE UP" },
+      { "v": "FOLLOW", "map": "FOLLOW" },
+      { "v": "WAVE", "map": "WAVE" },
+      { "v": "INVESTIGATE", "map": "INVESTIGATE" }
      ],
     "rooms": {
       "START": {
@@ -495,8 +495,7 @@
             "verbs": "SE",
             "target": "FORE4"
           }
-        ],
-        "inventory": []
+        ]
       },
       "TREE2": {
         "name": "Up the Spiral Tree",

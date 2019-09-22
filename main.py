@@ -53,8 +53,6 @@ def end_game(winning,moves):
         print('\nYou made {moves} moves. See you next time!'.format(moves=moves))
         
         
-
-
 def main():
     game = {}
     with open('txtgame.json') as json_file:
