@@ -161,7 +161,7 @@
       },
       "DRWBRDG": {
         "name": "Drawbridge: entrance to the Castle",
-        "desc": "This a drawbridge. It can only be opened from the inside of the castle.",
+        "desc": "This a drawbridge. It can only be opened from the inside of the castle. (Try 'NORTH' or 'SOUTH')",
         "exits": [
           {
             "verb": "SOUTH",
@@ -382,7 +382,7 @@
             "target": "COTTAGE"
           },
           {
-            "verbs": "NW",
+            "verb": "NW",
             "target": "FORE5"
           }
         ]
@@ -551,7 +551,8 @@
         "name": "You approach the elf girl",
         "desc": "The trolls don't notice you (they aren't naturally attentive creatures) and you cut through one of the rope loops with your sword. You untangle the rest and sling it over your shoulder just in case. You both escape successfully, but you need to leave soon or they might come after you.",
         "exits": [
-          {"verb": "NORTH",
+          {
+            "verb": "NORTH",
           "target": "COTTAGE"
           },
           {
