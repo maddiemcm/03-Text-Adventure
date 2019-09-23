@@ -1,0 +1,49 @@
+Name: Stephen Nixon
+Date: 9/23/2019
+Project: 3 - Text Adventure
+Peer's repository: https://github.com/maddiemcm/03-Text-adventure 
+
+
+
+What is something you learned by reviewing your peer's project?
+
+    I learned that presenting a false choice leads the player (me) to pay more attention to the narrative information.
+    When I went north after the introduction with the captain, it lead me to think about where else I could go when north wasn't an option.
+ 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+
+    The instructions that included available actions were very helpful. I would like to apply those methods of teaching the player what they could do.
+
+What suggestions would you have for your peer to improve his/her code?
+
+    "\r\n" is the String for a line break. It would help format the introduction, but otherwise it wasn't needed very much.
+
+What could have been clearer or better commented?
+
+    It was unclear to me that saving the elf had any consequence, as I then went off to explore the cottage.
+    But I can see in the code that was simply just because of the path I chose.
+
+Was there anything in the code that was confusing to you? If so, what?
+
+    Nope! very readable.
+
+Does the repository contain an appropriate LICENSE?
+
+    Yes.
+
+What is something he/she could add to the README.md to make it more descriptive?
+
+    Nothing, it was more than enough information for the player to get started.
+
+Pay a compliment to your peer based on the quality of his/her code.
+
+    Excellent narrative design! 
+    The use of imagery was compelling, especially with the captain abruptly waking you up.
+    Also, it had a light comedic touch similar to Hitchhiker's guide.
+
+    The game also had plenty of space to explore, so much that I had to look back to remember where I had gone and where I wanted to go.
+    The elf was a nice touch, reinforced the gaming instinct to do altruistic things for an assumed reward (climbing the tower). 
+
+
+    I honestly enjoyed playing this adventure more than the Hitchhiker's guide (that game has an annoying amount of lose conditions)
